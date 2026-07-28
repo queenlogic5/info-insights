@@ -3,316 +3,440 @@
   "insights": [
     {
       "hotspot_id": "H01",
-      "title": "BYD密集发布多款新车：Denza Z9S/豹7/秦Max/Atto 3",
-      "what_changed": "BYD在24小时内密集曝光/预售4款覆盖轿跑(Denza Z9S 1,194HP)、SUV(豹7上市10月销量破20万)、旗舰轿车(秦Max)、全球车型(Atto 3升级版)的全新或改款产品，形成跨细分市场的饱和式产品投放攻势。",
-      "why_it_matters": "BYD正从'单一爆款'转向'多车矩阵围猎'策略——用Z9S冲击50万+高端性能市场(对抗NIO ET9/特斯拉Plaid)、豹7验证硬派越野细分需求、秦Max巩固15-25万基本盘、Atto 3升级维持海外竞争力。多线同时发力意味着BYD有能力在产能、渠道、品牌层面同时支撑4个定位差异极大的产品线，这是竞品难以复制的体系化优势。",
+      "title": "BYD Racco K-Car Launch in Japan — World's First SDV Kei EV",
+      "what_changed": "BYD launched the Racco, an all-electric K-Car in Japan priced from ~$13,100 USD (~1.99M yen after subsidies), offering up to 320 km WLTC range. It is marketed as the 'world's first SDV-based' light EV, directly competing with Toyota, Honda, Daihatsu, and Suzuki in the kei car segment — Japan's most protected and domestic-dominated vehicle category.",
+      "why_it_matters": "Japan's kei car segment has been a domestic stronghold for decades, with non-Japanese manufacturers virtually absent. BYD's entry with an SDV-native, competitively priced EV breaks this barrier and tests whether Chinese EV tech can win in a market historically resistant to foreign auto brands. If successful, this opens a new volume channel for BYD and pressures Japanese OEMs to accelerate EV plans in their home market.",
       "who_is_impacted": [
-        "Tesla（Model S/X在高性能轿车段面临Z9S竞争）",
-        "NIO（ET9高端轿跑定位被Z9S直接对标）",
-        "Li Auto（L系列在家庭SUV市场的份额受豹7侵蚀）",
-        "XPeng（P7+在25万级轿车市场受秦Max挤压）",
-        "Hyundai/Kia（Atto 3升级版在欧洲/东南亚市场竞争压力加大）",
-        "传统豪华品牌BBA（高端EV产品线声势被BYD压制）"
+        "Toyota — kei car market share erosion in home market",
+        "Honda, Daihatsu, Suzuki — direct kei segment competitors",
+        "Japanese government — policy pressure to support domestic EV transition",
+        "Global EV market observers — litmus test for Chinese EV acceptance in Japan"
       ],
       "next_actions": [
-        "竞品应监测Denza Z9S国内定价策略，如其定价低于50万人民币将对NIO ET9和特斯拉Model S造成显著冲击",
-        "建议关注秦Max的智驾配置水平——若搭载城市NOA等高级功能，将加速20万级市场的智驾标配化竞争",
-        "海外车企需加速Atto 3竞品改款节奏，否则在东南亚/澳洲/欧洲市场的A级SUV份额将被持续蚕食",
-        "建议产业链关注BYD产能分配——若上述4款车型同步放量，将对电池、IGBT、座椅等上游供应链产能产生虹吸效应"
+        "Monitor Racco first-month order numbers vs Toyota/Honda kei EV counterparts",
+        "Track Japanese consumer sentiment on Chinese EV brand reliability and SDV features",
+        "Assess subsidy eligibility impact on demand — how price elasticity shifts below 2M yen",
+        "Watch for Japanese OEM retaliation pricing or accelerated kei EV launches"
       ],
       "risk_notes": [
-        "多车型同时上市存在自相蚕食风险——Z9S与汉系列、秦Max与海豹系列定位可能重叠",
-        "BYD品牌向上的pace过快——Denza Z9S能否支撑1,194HP的高端定位存在执行风险",
-        "产品线扩张过快可能稀释经销商资源和服务质量"
+        "Japanese dealer network resistance — BYD lacks Japan-wide service infrastructure",
+        "Kei car buyers are traditionally conservative — brand loyalty runs deep",
+        "Trade friction escalation — Japan could impose EV tariff measures similar to EU/US",
+        "SDV dependency raises data privacy and cybersecurity scrutiny in Japan"
       ],
       "references": [
-        "https://carnewschina.com/2026/07/20/byd-denza-z9s-cabin-revealed-1194-hp-sedan-keeps-physical-buttons/",
-        "https://cnevpost.com/2026/07/20/byd-fang-cheng-bao-tai-7-200000-sales/",
-        "https://cnevpost.com/2026/07/20/byd-offers-closer-look-qin-max/",
-        "https://thedriven.io/2026/07/21/byd-seeks-early-interest-in-upgraded-atto-3-with-more-power-and-premium-interior/"
+        {
+          "title": "Japan's first 320 km electric K-Car isn't Japanese: BYD Racco launches from 13,100 USD",
+          "url": "https://carnewschina.com/2026/07/28/japans-first-320-km-electric-k-car-isnt-japanese-byd-racco-launches-from-14200-usd/",
+          "source": "CarNewsChina"
+        },
+        {
+          "title": "BYD takes on Toyota, Honda, and Nissan on their home turf with all-electric K-Car Racco",
+          "url": "https://cnevpost.com/2026/07/28/byd-launches-k-car-racco-japan/",
+          "source": "CnEVPost"
+        },
+        {
+          "title": "BYD launches the 'world's first' SDV kei EV, starting at just $13,000",
+          "url": "https://electrek.co/2026/07/28/byd-launches-worlds-first-sdv-kei-ev-starting-at-13000/",
+          "source": "Electrek"
+        }
       ]
     },
     {
       "hotspot_id": "H02",
-      "title": "特斯拉密集争议：Robotaxi事故/FSD罚单/Autopilot天价裁决",
-      "what_changed": "特斯拉24小时内爆发4起负面事件：Houston Robotaxi远程操作员撞车事故(NHTSA数据证实)、FSD系统缺陷导致车主收超速罚单且特斯拉拒绝修复、佛罗里达总检察长请求撤销2.43亿美元Autopilot判决、Cybercab集成Starlink天线。自动驾驶安全性与法律合规性同时遭受集中质疑。",
-      "why_it_matters": "这是特斯拉自动驾驶叙事体系的一次系统性危机——NHTSA数据首次曝光Robotaxi远程操作员角色(说明FSD远未达到L4)、FSD导致罚单显示系统存在驾驶行为缺陷、天价裁决案的政治干预引发司法不确定性。三条负面线叠加，正在撕裂特斯拉'FSD即将到来'的核心估值逻辑，可能影响FSD选购率和Robotaxi商业化时间表的资本市场信任。",
+      "title": "BYD Da Han Flagship EV with 1,008km Range & Seal 06 LIDAR Refresh",
+      "what_changed": "BYD confirmed the Da Han (Great Han) flagship electric sedan will exceed 1,000 km range (1,008 km CLTC), while the Seal 06 receives a 2027 refresh with integrated LIDAR for enhanced autonomous driving capabilities. Both vehicles advance BYD's leadership in range and ADAS hardware.",
+      "why_it_matters": "Crossing the 1,000 km range barrier is a psychological and technical milestone that shifts consumer expectations for what an EV can deliver — effectively eliminating range anxiety for a full week of commuting. Meanwhile, adding LIDAR to the popular Seal 06 (~$20K segment) democratizes premium ADAS tech, putting pressure on Tesla (vision-only FSD) and NIO (LIDAR on premium only) to justify their technology stacks and pricing.",
       "who_is_impacted": [
-        "Tesla（品牌声誉与FSD选装率面临严重下行风险）",
-        "Tesla投资者/股东（Robotaxi商业化估值逻辑动摇）",
-        "Waymo/Cruze（竞争对手可借此论证远程辅助模式优于Tesla纯视觉方案）",
-        "NHTSA/监管机构（面临更大压力收紧自动驾驶监管标准）",
-        "保险公司（特斯拉事故定责和理赔规则可能重估）"
+        "Tesla — range comparison disadvantage; vision-only ADAS vs BYD LIDAR approach",
+        "NIO, Xpeng — premium-range proposition challenged by BYD mainstream models",
+        "Li Auto — EREV range advantage diminishes if BEVs cross 1,000km",
+        "Global OEMs (VW, Ford, GM) — widening tech gap with Chinese leaders"
       ],
       "next_actions": [
-        "竞品应抓住窗口期发布自身自动驾驶安全对比数据，强化'安全透明'差异化定位",
-        "建议跟进Houston事故细节——如果远程操作员是常态而非应急，说明Robotaxi的L4叙事存在根本性缺陷，可作为行业游说材料",
-        "Cross-check Florida AG与Tesla的政治关联背景——该裁决若被撤销将开创司法干预自动驾驶事故判例的先例",
-        "建议关注FSD罚单事件是否催生集体诉讼——如成案将对OTA更新导致车辆行为变更的法律责任边界产生判例影响"
+        "Track Da Han pricing and positioning vs NIO ET7 and Mercedes EQ flagship",
+        "Compare Seal 06 LIDAR model price premium over standard version to gauge ADAS value perception",
+        "Monitor consumer shift from EREV/PHEV to long-range BEV as barrier falls",
+        "Evaluate Blade Battery 2.0 energy density improvements enabling 1,000km in a sedan form factor"
       ],
       "risk_notes": [
-        "该热点84小时内负面集中度极高，但缺乏跨平台交叉验证(全部来自electrek同一来源)，需警惕单源偏差",
-        "特斯拉粉丝群体和做空力量的舆论战可能扭曲事件真实影响",
-        "Cybercab集成Starlink是积极信号——特斯拉可能在借助SpaceX技术解决Robotaxi通信延迟，不应被完全淹没在负面中"
+        "CLTC range is optimistic vs WLTP/EPA — real-world 1,000km may be 700-800km highway",
+        "LIDAR adds cost and supply chain complexity — margin impact on Seal 06",
+        "Battery weight for 1,000km pack could impact handling and efficiency at high speeds",
+        "Regulatory risk if ultra-long range batteries face new safety certification requirements"
       ],
       "references": [
-        "https://electrek.co/2026/07/20/tesla-robotaxi-remote-operator-crash-houston/",
-        "https://electrek.co/2026/07/20/tesla-fsd-speeding-ticket-removed-speed-setting/",
-        "https://electrek.co/2026/07/20/florida-ag-tesla-243m-autopilot-verdict/",
-        "https://electrek.co/2026/07/20/tesla-starlink-cybercab-integration-why/"
+        {
+          "title": "2027 BYD Seal 06 Gets Lidar, BYD Da Han Gets 1,008-km Range",
+          "url": "https://cleantechnica.com/2026/07/27/2027-byd-seal-06-gets-lidar-byd-da-han-gets-1008-km-range/",
+          "source": "CleanTechnica"
+        },
+        {
+          "title": "BYD's new flagship EV breaks cover for the first time with over 1,000 km of range [Video]",
+          "url": "https://electrek.co/2026/07/27/byd-reveals-new-flagship-ev-range-1008-km-video/",
+          "source": "Electrek"
+        },
+        {
+          "title": "BYD reveals new Seal 06 EV images ahead of launch",
+          "url": "https://electrek.co/2026/07/27/byd-reveals-new-seal-06-ev-images-launch/",
+          "source": "Electrek"
+        }
       ]
     },
     {
       "hotspot_id": "H03",
-      "title": "蔚来Firefly首发Halo系列+ES8交付里程碑",
-      "what_changed": "蔚来旗下Firefly品牌推出设计驱动型Halo系列首款车型，同时ES8即将迎来第13万辆交付里程碑——5座版本重振了该车型的销售势头，说明产品结构调整策略见效。",
-      "why_it_matters": "蔚来正通过Firefly Halo系列向'入门高端'市场延伸，与主品牌NIO形成价格与定位梯度——这是蔚来规模化破局的关键一步。ES8五座版复兴证明蔚来在高端纯电SUV市场仍具产品定义能力，为蔚来在30万+价位段提供了稳定的现金流基本盘。Firefly Halo的设计驱动定位若能成功，将验证蔚来'设计溢价'品牌策略在更低价格带的迁移能力。",
+      "title": "BYD Confirms Humanoid Robot Unveiling in August",
+      "what_changed": "BYD confirmed plans to unveil a humanoid robot in August 2026, announced via China Securities Journal and the Di Space Zhengzhou WeChat channel. This follows the broader trend of EV manufacturers (Tesla with Optimus, Xiaomi with CyberOne) diversifying into general-purpose robotics.",
+      "why_it_matters": "BYD's humanoid robot signals strategic diversification beyond vehicles, leveraging its expertise in batteries, motors, and mass manufacturing. Humanoid robots share core technologies with EVs (sensors, actuators, battery management, AI), creating natural synergies. If BYD enters this space seriously, it could replicate its EV playbook — vertical integration at scale driving down costs — challenging dedicated robotics players like Unitree, Boston Dynamics, and Tesla Optimus.",
       "who_is_impacted": [
-        "Li Auto（理想L9/L8在35-50万SUV市场面临ES8的持续竞争）",
-        "Tesla（Model Y在30万级纯电SUV市场的中长期份额可能受Firefly侵蚀）",
-        "BYD（腾势D9/豹系列在25-40万区间面临NIO双品牌夹击）",
-        "BMW/Mercedes（iX3/EQB在高端纯电市场的份额被NIO持续蚕食）",
-        "传统二级供应商（NIO销量增长将带来持续的BOM采购需求）"
+        "Tesla — Optimus robot faces a formidable new competitor with BYD's cost structure",
+        "Unitree, Fourier Intelligence, other Chinese humanoid startups — BYD scale could reshape market",
+        "Foxconn, other manufacturing giants — potential customers or competitors depending on BYD's go-to-market",
+        "Global supply chain for robotic components (motors, gearboxes, sensors)"
       ],
       "next_actions": [
-        "建议监测Firefly Halo首款车的最终定价——如定价进入20-25万区间，将直接进入特斯拉Model 3/Y和比亚迪汉的基本盘",
-        "关注Halo系列的渠道策略——独立渠道还是共享NIO House将决定Firefly能否触及不同客群",
-        "竞品应分析ES8五座版的产品改动细节——如果只是简单取消第三排而非深度调整座椅和NVH，说明是临时补救措施而非长期产品规划",
-        "建议关注蔚来本月订单和交付数字以验证ES8的复苏是否可持续"
+        "Identify BYD's robot manufacturing partner and supply chain (in-house vs joint venture)",
+        "Compare BYD robot specs vs Tesla Optimus Gen 2 and Unitree H1 upon August unveiling",
+        "Assess BYD's talent acquisition in robotics — any key hires from UBTech, DJI, or research labs",
+        "Evaluate potential for BYD robot deployment in its own factories (automation + testing ground)"
       ],
       "risk_notes": [
-        "Firefly品牌独立运营成本高昂，在销量起量前可能拖累蔚来整体毛利率",
-        "Halo系列'设计驱动'定位在中端市场能否复制NIO在高端的设计溢价存疑",
-        "ES8五座版可能蚕食ET7/ES6等车型的潜在客户"
+        "Humanoid robots remain unproven for mass-market commercial viability",
+        "BYD's core auto business could face resource/capital allocation dilution",
+        "Chinese government policy on humanoid robots could shift — national security implications",
+        "Technology readiness gap — humanoid dexterity and autonomy lag behind EV tech maturity",
+        "Unveiling without clear commercial roadmap could be perceived as hype-driven distraction"
       ],
       "references": [
-        "https://cnevpost.com/2026/07/20/nio-firefly-launches-first-model-halo-series/",
-        "https://cnevpost.com/2026/07/20/nio-to-deliver-130000th-new-es8-this-week/"
+        {
+          "title": "BYD confirms plan to unveil humanoid robot in August",
+          "url": "https://cnevpost.com/2026/07/28/byd-confirms-plan-humanoid-robot-aug/",
+          "source": "CnEVPost"
+        },
+        {
+          "title": "BYD Continuing the Robot Craze — Is This Like The Smartphone Revolution Or VR Headsets?",
+          "url": "https://cleantechnica.com/2026/07/28/byd-continuing-the-robot-craze-is-this-like-the-smartphone-revolution-or-vr-headsets/",
+          "source": "CleanTechnica"
+        }
       ]
     },
     {
       "hotspot_id": "H04",
-      "title": "Smart #2全球测试启动，即将亮相巴黎车展",
-      "what_changed": "Smart #2纯电车型进入全球测试阶段并确认将在巴黎车展上首次公开亮相，两个独立来源(CnEVPost+CarNewsChina)同步报道强化了事件可信度。",
-      "why_it_matters": "Smart #2是Smart全面电动化转型后的第二款车型，其定位和定价将验证Smart#1的成功是否可复制。巴黎车展作为全球首发窗口说明Smart目标是欧洲市场(Smart品牌传统大本营)。若#2延续#1的'精品小型SUV'路线且定价合理，将给MINI Electric和入门级ID.系列带来显著竞争压力。Smart作为吉利-奔驰合资品牌的战略意义在于：它是中国供应链+欧洲品牌+全球渠道这一混血模式的试验田。",
+      "title": "Baidu Apollo Go Robotaxi Road Tests in London via Lyft Freenow",
+      "what_changed": "Baidu Apollo Go began on-road testing of its RT6 robotaxi vehicles in London's Brent borough, with safety operators aboard. The service will be available through Lyft's Freenow mobility platform in the UK, with public rides expected to start in 2027. This marks Chinese autonomous driving technology entering the European market.",
+      "why_it_matters": "This is the first major deployment of Chinese autonomous driving technology in a Western market, and it uses a unique partnership model — Baidu supplies the AV tech, Lyft/Freenow provides the mobility platform and local regulatory relationships. If successful, this model could be replicated across other European cities, positioning Baidu as a global robotaxi contender alongside Waymo and Cruise. It also tests regulatory openness to Chinese AV tech in Europe amid rising trade tensions.",
       "who_is_impacted": [
-        "MINI（Electric系列在小型豪华EV市场面临Smart#2直接竞争）",
-        "Volkswagen（ID.2/ID.3在入门级EV市场受Smart#2的定位挤压）",
-        "Tesla（传闻中的小型车型若推出，Smart#2将构成先发优势的绊脚石）",
-        "Stellantis（Fiat 500e/Jeep Avenger在小型EV市场面临新威胁）",
-        "BYD（海豚/海鸥在欧洲市场与Smart#2同价位竞争加剧）"
+        "Waymo — first-mover advantage challenged by lower-cost Chinese AV alternative in Europe",
+        "Uber/Lyft — platform partners but also dependent on AV suppliers; Lyft's exclusive deal may limit Uber",
+        "UK government — regulatory precedent for Chinese AV deployment sets tone for EU",
+        "London taxi/PHV drivers — workforce implications as public rides begin in 2027"
       ],
       "next_actions": [
-        "建议在巴黎车展前通过行业渠道获取Smart#2的尺寸、续航和定价信息以提前制定应对方案",
-        "竞品可在巴黎车展期间针对性地发布自身小型EV产品信息以对冲Smart#2的曝光声量",
-        "建议关注Smart#2的供应链细节——电池供应商和电驱动方案将揭示其成本结构",
-        "欧洲本土车企应评估Smart#2的关税风险——若在西安工厂生产出口欧洲，关税成本可能成为Smart的定价劣势"
+        "Monitor London regulatory response — safety record, accident reporting requirements",
+        "Track expansion timeline beyond Brent — which UK cities next and then EU",
+        "Assess RT6 cost advantage vs Waymo's Geely-based fleet — unit economics comparison",
+        "Evaluate Lyft's exclusivity terms — how this affects Uber's UK AV strategy",
+        "Watch for political/trade backlash — could Chinese AV face 'national security' scrutiny similar to Huawei 5G"
       ],
       "risk_notes": [
-        "Smart#1上市后销量并未完全达到预期，#2的市场前景仍需谨慎评估",
-        "巴黎车展首发不代表立即量产，从发布到交付的周期可能给竞品留出反击窗口",
-        "欧洲EV补贴政策变化可能影响Smart#2的目标售价区间"
+        "UK regulatory environment stable now but could shift with political changes",
+        "Geopolitical risk — China-UK relations could impact operating licenses",
+        "Safety operator model masks true autonomy readiness; public rides may reveal gaps",
+        "Data sovereignty concerns — Chinese AV data collected on UK roads",
+        "Lyft's financial health — platform viability depends on Lyft's continued investment in Freenow"
       ],
       "references": [
-        "https://cnevpost.com/2026/07/20/smart-2-ev-global-testing/",
-        "https://carnewschina.com/2026/07/20/smart-2-ev-enters-global-testing-ahead-of-paris-motor-show-debut/"
+        {
+          "title": "Baidu Apollo Go starts robotaxi road tests in London, public rides in 2027",
+          "url": "https://cnevpost.com/2026/07/28/baidu-apollo-go-robotaxi-road-tests-london/",
+          "source": "CnEVPost"
+        },
+        {
+          "title": "Lyft and Baidu enter London's robotaxi battleground as testing begins",
+          "url": "https://techcrunch.com/2026/07/28/lyft-and-baidu-enter-londons-robotaxi-battleground-as-testing-begins/",
+          "source": "TechCrunch"
+        }
       ]
     },
     {
       "hotspot_id": "H05",
-      "title": "现代IONIQ 5热销且50亿美元电池工厂投产",
-      "what_changed": "现代IONIQ 5在美国经销商处快速脱销、库存日益紧张；同时现代50亿美元电池工厂正式投产，年产能可支持30万辆电动汽车——供需两端同时释放积极信号。",
-      "why_it_matters": "这是现代北美EV战略的质变节点：IONIQ 5供不应求说明现代的产品力已获得美国市场认可(尤其在$7,500联邦补贴延续的背景下)；50亿美元电池工厂投产意味着现代正在构建北美本土化供应链闭环——绕过IRA法案的电池组件限制，使现代EV有资格获得全额税收抵免。这对仍在北美依赖进口电池的丰田/KIA/日产形成显著竞争优势，并直接威胁特斯拉Model Y的核心销量区间。",
+      "title": "Zeekr Launches 5-Seat 9X Flagship Luxury SUV in China",
+      "what_changed": "Zeekr launched the 5-seat variant of its 9X flagship SUV in China, priced from ¥451,900 (~$66,530). The vehicle features a 70 kWh battery pack and delivers up to 1,030 kW (1,381 hp). The 5-seat configuration is priced below the existing 6-seat variant, broadening the model's addressable market for luxury SUV buyers.",
+      "why_it_matters": "Zeekr is strategically expanding its flagship lineup with a more accessible variant while maintaining extreme performance specs (1,381 hp puts it in hypercar territory). This dual-variant strategy (5-seat + 6-seat) mirrors Li Auto's L-series playbook and signals Zeekr's ambition to capture higher volume in the premium segment. The pricing below ¥500K positions it against NIO ES/ET series and the Li L9 while offering class-leading power figures.",
       "who_is_impacted": [
-        "Tesla（Model Y在25-40万级纯电SUV的第一选择地位被IONIQ 5持续削弱）",
-        "KIA（EV6与IONIQ 5同平台但品牌势能落后，面临兄弟品牌的市场挤压）",
-        "Toyota（bZ4X在北美表现不佳，现代的成功加剧丰田EV转型压力）",
-        "Volkswagen（ID.4在北美市场面临IONIQ 5的份额竞争）",
-        "NIO/XPeng（中国品牌进入美国市场的窗口正在被本土化产能布局成熟的对手收窄）"
+        "NIO — ES8/ET7 sales could face cannibalization in ¥400K-¥600K bracket",
+        "Li Auto — L9 positioning challenged on performance metrics",
+        "Mercedes, BMW — domestic Chinese brands pulling ahead on specs in the premium segment",
+        "BYD (parent) — Zeekr as the halo brand for Geely, not directly competing with BYD but raising Geely Group prestige"
       ],
       "next_actions": [
-        "竞品应立即评估现代电池工厂的具体电芯技术路线——如果是LFP与NCM并行，将说明现代在降本和续航之间采取了灵活策略",
-        "建议拆解IONIQ 5热销的核心驱动因素——是设计、续航、充电速度还是补贴——以针对性优化自身产品定义",
-        "建议关注现代是否计划将该工厂的电池供应扩展至起亚/捷尼赛思品牌——这将揭示现代汽车集团的北美整体电气化节奏",
-        "中国品牌出口北美应加速，否则现代的本土化产能+IRA补贴双重优势将形成难以逾越的先发壁垒"
+        "Compare 5-seat vs 6-seat 9X order mix in first 30 days to gauge consumer preference",
+        "Analyze Zeekr's total monthly delivery trajectory — is 9X driving meaningful volume growth",
+        "Benchmark 1,381 hp powertrain against Lotus Eletre and HiPhi Z performance variants",
+        "Track Zeekr margin trend as 9X scales — premium positioning intended to lift Geely Group ASP and margin"
       ],
       "risk_notes": [
-        "热销可能导致IONIQ 5加价销售，损害消费者口碑和长期品牌忠诚度",
-        "50亿美元电池工厂的产能爬坡存在不确定性和执行风险",
-        "美国大选后IRA政策可能调整，影响现代补贴资格的不确定性"
+        "Zeekr loss per vehicle remains a concern — 9X must deliver positive unit margins despite aggressive specs",
+        "70 kWh battery on a flagship SUV is relatively small — range may disappoint vs competitors",
+        "Premium EV market in China is overcrowded — multiple brands fighting for ¥400K+ share",
+        "Geely's multi-brand strategy (Zeekr, Lynk & Co, Polestar, Lotus) risks internal cannibalization"
       ],
       "references": [
-        "https://electrek.co/2026/07/20/hyundai-ioniq-5-selling-fast-dealers-running-out/",
-        "https://electrek.co/2026/07/20/hyundais-5b-battery-plant-opens-capacity-300k-evs/"
+        {
+          "title": "Five-seat Zeekr 9X flagship SUV launched at 69,745 USD in China",
+          "url": "https://carnewschina.com/2026/07/28/five-seat-zeekr-9x-flagship-suv-launched-at-69745-usd-in-china/",
+          "source": "CarNewsChina"
+        },
+        {
+          "title": "Zeekr launches 5-seat 9X to sustain luxury SUV sales momentum",
+          "url": "https://cnevpost.com/2026/07/28/zeekr-launches-5-seat-9x/",
+          "source": "CnEVPost"
+        }
       ]
     },
     {
       "hotspot_id": "H06",
-      "title": "全球电动汽车充电基础设施加速扩张",
-      "what_changed": "全球充电基础设施在多个市场同步加速扩张：美国Pilot充电网络达300站、Allego迁移至AMPECO平台覆盖16国、英国Char.gy部署3,000个路侧充电桩、Circontrol品牌整合，叠加EU充电建设速度已远超EV销量增速。",
-      "why_it_matters": "充电基础设施从'瓶颈'转向'催化剂'的拐点信号正在加强。EU数据表明充电桩增速已远超EV销量增速——这意味着''里程焦虑''作为消费者拒绝购买EV的最大理由正在消散。基础设施的加速布局降低了消费者的充电等待时间和不确定性，直接利好所有EV车企的终端销售转化率。Pilot加油站网络的跨场景快充布局(覆盖长途出行)尤其重要——它打破了对Tesla Supercharger的依赖垄断。",
+      "title": "BMW Planning i4 Electric Convertible for 2028",
+      "what_changed": "BMW is developing an all-electric i4 Convertible, expected for 2028, according to BMWBLOG sources. The two-door, four-seat EV convertible will feature a power-folding soft-top, filling a near-empty niche in the premium EV segment.",
+      "why_it_matters": "The EV convertible market is virtually unoccupied — no major OEM offers a direct competitor. BMW's move leverages its strong convertible heritage (4 Series Convertible, Z4) while transitioning to EV. This allows BMW to command a premium price in a segment with little price competition and high brand loyalty. It also helps BMW manage fleet-average CO2 compliance by electrifying a traditionally low-volume but high-image model line.",
       "who_is_impacted": [
-        "Tesla（Supercharger网络独占优势被稀释，Pilot+Allego等第三方网络崛起削弱其充电壁垒）",
-        "所有EV车企（充电基础设施改善将系统性降低消费者购买EV的心理障碍，利好全行业）",
-        "传统加油站运营商（Pilot/Flying J的转型样板将推动更多加油站加装充电设施）",
-        "充电设备制造商（全球部署加速带来持续的充电桩/充电模块采购需求）",
-        "电网运营商（大规模充电负载接入需要升级配电基础设施）"
+        "Mercedes-Benz — no confirmed EV convertible equivalent; EQS/ CLE roadmap may need adjustment",
+        "Tesla — Roadster 2 still unproduced; BMW beats Tesla to market for an EV convertible if timeline holds",
+        "Audi — no convertible in current EV roadmap; potential gap in premium German EV lineup",
+        "Convertible enthusiasts — validation that the body style survives the EV transition"
       ],
       "next_actions": [
-        "建议EV车企重新评估自身充电网络投资策略——在第三方网络快速成熟背景下，自建超充的重资产模式是否仍然必要",
-        "竞品应评估在Pilot/Flying J等加油站场景的合作机会，尤其是没有自建充电网络的品牌",
-        "建议关注EU充电增速vs销量增速的具体结构性数据——如慢充占比过高可能导致实际用户体验改善有限",
-        "充电运营商应关注品牌整合(如Circontrol→Circutor)趋势——行业集中度提升将带来平台化竞争格局变化"
+        "Track official BMW confirmation and timeline commitment — 2028 target may shift",
+        "Estimate i4 Convertible pricing premium vs i4 sedan (~$10-15K uplift typical for convertibles)",
+        "Monitor Mercedes response — likely accelerated CLACLE convertible development",
+        "Assess battery packaging challenges — convertible body lacks structural rigidity for underfloor packs",
+        "Watch for parts-sharing with next-gen Neue Klasse platform — will i4 Convertible be NK-based or CLAR-based"
       ],
       "risk_notes": [
-        "充电基础设施快速扩张但运维质量参差不齐——低利用率站点的运维成本可能拖累运营商盈利能力",
-        "充电标准(NACS vs CCS)在美国仍存在不确定性，可能影响投资决策",
-        "电网容量瓶颈可能成为下一阶段的最大制约因素"
+        "2028 is two years away — technology and competitor landscape could shift significantly",
+        "Convertible structural rigidity compromises battery protection and range",
+        "Low volume means limited profitability; project viability depends on parts commonality with i4 sedan",
+        "Regulatory risk — pedestrian safety and rollover standards may tighten for convertibles"
       ],
       "references": [
-        "https://insideevs.com/news/802174/pilot-flying-j-ev-chargers-expansion-2026/",
-        "https://cleantechnica.com/2026/07/20/charging-infrastructure-has-far-outpaced-ev-sales-in-all-but-one-eu-country-analysis/",
-        "https://chargedevs.com/newswire/allego-migrates-its-16-country-european-public-charging-network-to-the-ampeco-charging-management-platform/",
-        "https://chargedevs.com/newswire/char-gy-to-deploy-3000-on-street-ev-chargers-in-west-northamptonshire-uk/",
-        "https://chargedevs.com/newswire/circontrols-ev-charging-products-to-be-marketed-under-the-circutor-brand/"
+        {
+          "title": "BMW is finally making the electric convertible we've been waiting for",
+          "url": "https://electrek.co/2026/07/27/bmw-i4-electric-convertible-2028/",
+          "source": "Electrek"
+        },
+        {
+          "title": "BMW Is Finally Planning An Electric Convertible: Report",
+          "url": "https://insideevs.com/news/802883/electric-bmw-i4-convertible/",
+          "source": "InsideEVs"
+        }
       ]
     },
     {
       "hotspot_id": "H07",
-      "title": "电动车市场里程碑：中国燃油车崩溃+欧洲EV首次超越燃油车",
-      "what_changed": "两大历史性转折同步发生：6月中国EV销量报告表明燃油车市场加速崩溃(燃油车份额加速收缩)；欧洲最大汽车市场(德国)的EV销量首次超越汽油车和柴油车的合计销量，标志着纯电动力系统在欧洲主流市场成为首选。",
-      "why_it_matters": "这是全球汽车产业百年转折点的数据信号。中国+欧洲作为全球最大两个汽车市场，在同月内同时出现燃油车崩溃和EV登顶的里程碑——说明EV的渗透率曲线正在越过临界点进入加速爬升阶段。对车企来说：在未来12-24个月内未完成EV主力产品切换的品牌，将面临中国和欧洲两大核心市场的结构性萎缩风险。尤其是那些依赖中国和欧洲市场利润的传统车企，其燃油车产能和经销商网络将在更短时间内变为沉没成本。",
+      "title": "Xiaomi Skynomad EREV Specs Revealed: 5.7L/100km Economy, July 30 Debut",
+      "what_changed": "Xiaomi Auto detailed the Skynomad Kunlun extended-range EV (EREV) specifications: 5.7L/100km fuel consumption, 92-octane gasoline compatibility, and 416 HP output, ahead of its official July 30 debut. This marks Xiaomi's strategic expansion from pure BEVs into the EREV segment.",
+      "why_it_matters": "Xiaomi's move into EREV mirrors the successful playbook of Li Auto (which leads EREV sales in China) and addresses consumer range anxiety without requiring massive charging infrastructure investment. Xiaomi is leveraging its existing customer ecosystem (500M+ smartphone/IoT users) and brand trust to cross-sell into a broader EV portfolio. If SU7 BEV success translates to Skynomad EREV demand, Xiaomi could disrupt the mid-to-premium EREV market just as it disrupted the smartphone market.",
       "who_is_impacted": [
-        "Toyota/Volkswagen/Stellantis（燃油车核心利润来源正在两大市场同时溃缩，电动化转型不再是option而是survival）",
-        "BYD/SAIC/Geely（中国本土品牌在燃油车崩溃中直接受益，加速份额获取）",
-        "Tesla/NIO/XPeng（欧洲EV市场爆发为其出口战略提供了宏观顺风）",
-        "传统经销集团（燃油车库存贬值和售后收入下降将冲击其盈利模型）",
-        "石油行业（交通领域石油需求的结构性下降信号已经出现）"
+        "Li Auto — direct EREV segment challenger with similar SUV form factor",
+        "AITO (Huawei) — EREV competition in the Huawei automotive ecosystem",
+        "BYD — DM-i PHEV lineup faces alternative EREV competition from Xiaomi",
+        "NIO — potential BEV demand erosion as consumers choose EREV flexibility",
+        "Stellantis, Ford — EREV concept growing in global relevance for US/European markets"
       ],
       "next_actions": [
-        "建议传统车企立即重估NG(下一代)燃油车平台投资——如果两大市场已经越过拐点，燃油车研发投资回报率可能转负",
-        "EV品牌应加速欧洲市场渠道建设，抓住德国EV登顶带来的示范效应和跟风效应",
-        "建议分析中国燃油车崩溃的结构性因素——是PHEV替代、价格战导致的消费心理转变还是牌照政策驱动——以预判其他市场的EV拐点时间",
-        "投资机构应重新评估传统车企的资产价值——其燃油车产能的账面价值与实际市场价值之间的差距可能快速扩大"
+        "Compare Skynomad EREV specs vs Li Auto L6/L7 side-by-side at July 30 launch",
+        "Track Xiaomi order-to-delivery pipeline — SU7 production constraints may affect Skynomad ramp",
+        "Assess Xiaomi's EREV range-extender powertrain origin (in-house vs supplier partnership)",
+        "Monitor Xiaomi service network expansion — EREV requires both charging and ICE maintenance capability",
+        "Evaluate Skynomad pricing strategy — Xiaomi typically prices aggressively as market entrant"
       ],
       "risk_notes": [
-        "EV在中国和欧洲的登顶可能因补贴退坡或电价上涨而出现短期回调",
-        "燃油车崩溃速度可能引发就业和社会稳定问题，导致部分国家政策干预",
-        "EV普及过快对电网和充电基础设施的压力可能反噬消费者体验"
+        "EREV regulatory uncertainty — China may phase out EREV/PHEV subsidies similar to Europe trajectory",
+        "Xiaomi production capacity already stretched by SU7 demand; Skynomad adds manufacturing complexity",
+        "EREV requires both electric and ICE service capabilities — Xiaomi must dual-invest in service network",
+        "Fuel efficiency 5.7L/100km for an EREV is competitive but not class-leading if Li Auto improves Gen 5 system",
+        "Xiaomi brand perception as phone maker persists for some traditional auto buyers"
       ],
       "references": [
-        "https://cleantechnica.com/2026/07/20/the-big-ice-meltdown-junes-china-ev-sales-report/",
-        "https://insideevs.com/news/802162/evs-outsold-gas-hybrid-diesel-germany/"
+        {
+          "title": "Xiaomi unveils Skynomad EREV specs: 5.7L economy on 92 gas ahead of July 30 debut",
+          "url": "https://carnewschina.com/2026/07/28/xiaomi-unveils-skynomad-kunlun-erev-specs-92-octane-gas-and-5-7l-fuel-economy-ahead-of-july-30-debut/",
+          "source": "CarNewsChina"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H08",
+      "title": "FAW Hongqi Ultra-Fast Battery: 10%-70% in 3 Minutes 41 Seconds",
+      "what_changed": "FAW Hongqi announced an ultra-fast charging battery capable of 10% to 70% charge in 3 minutes 41 seconds, and 10% to 97% in 8 minutes 3 seconds. These charging speeds approach conventional gasoline refueling times, potentially eliminating a key barrier to EV adoption.",
+      "why_it_matters": "Sub-4-minute 10-70% charging is a breakthrough that, if verified and commercialized at scale, fundamentally changes the EV value proposition — the 'refueling time' gap versus ICE vehicles effectively disappears. This would be a greater market catalyst than range increases. As a state-owned enterprise, FAW Hongqi's achievement also carries strategic national significance for China's EV technology leadership narrative, and the core battery tech could propagate across other Chinese OEMs via supply chain diffusion.",
+      "who_is_impacted": [
+        "CATL, BYD (FinDreams Battery) — competitive pressure to match or exceed ultra-fast charging specs",
+        "Tesla — Supercharger network advantage diminishes if Chinese fast-charge ecosystem evolves faster",
+        "NIO — battery swap model differentiation challenged by ultra-fast charging that rivals swap time",
+        "Global OEMs — technology gap widens; licensing or partnership with Chinese battery tech becomes more urgent",
+        "Oil companies — last argument for ICE relevance (refueling speed) erodes"
+      ],
+      "next_actions": [
+        "Verify test methodology and ambient conditions (temperature, battery SoC window, cell degradation impact)",
+        "Identify battery chemistry (likely LFP with advanced electrolyte or LMFP variant)",
+        "Assess charging infrastructure requirements — what charger power (kW) is needed to achieve these rates",
+        "Track FAW commercialization timeline — when does this battery reach production Hongqi vehicles",
+        "Evaluate safety implications — ultra-fast charging at this rate generates extreme thermal stress",
+        "Compare with CATL's Shenxing Plus and BYD's Blade 2.0 fast-charge capabilities"
+      ],
+      "risk_notes": [
+        "Sub-4-min charging likely requires ultra-high-power chargers (600kW+), limiting real-world applicability",
+        "Battery lifespan degradation under repeated ultra-fast charging is unproven at this rate",
+        "Grid infrastructure in most markets cannot support sustained 600kW+ per charger",
+        "Cost premium for this battery technology may limit it to premium Hongqi models initially",
+        "Thermal runaway risk increases exponentially with charge rate — safety validation is critical"
+      ],
+      "references": [
+        {
+          "title": "FAW Hongqi says its ultra-fast battery charges 10%-70% in 3 minutes 41 seconds",
+          "url": "https://cnevpost.com/2026/07/28/faw-hongqi-battery-charges-10-70-3-mins-41-secs/",
+          "source": "CnEVPost"
+        }
       ]
     },
     {
       "hotspot_id": "H09",
-      "title": "小鹏AI基础设施负责人跳槽OpenAI机器人部门",
-      "what_changed": "小鹏汽车AI基础设施负责人卢思远离职加入OpenAI，参与具身AI机器人研发。这一级别核心技术高管的跨行业流失反映出中国EV车企在AI人才争夺战中的结构劣势。",
-      "why_it_matters": "这不仅是小鹏的人才损失，更代表中国EV行业面临的深层结构性挑战：在全球AI人才争夺战中，中国车企(即使是在AI投入最激进的XPeng)与全球顶级AI公司(OpenAI/DeepMind/Google Brain)之间的人才价差和科研生态差距难以在短期内弥合。EV的智能化竞争本质上是AI人才竞争——自动驾驶、智能座舱、智能制造的底层进步高度依赖AI基础设施团队的持续迭代。卢思远的出走说明：即使小鹏的AI基础设施投入在中国车企中处于领先水平，仍不足以留住在全球市场具备全流通能力的高级AI人才。",
+      "title": "Denza Z9S Pre-Sales Start August 3 with up to 920 km Range",
+      "what_changed": "The Denza Z9S, an all-electric sedan from the BYD-Daimler joint venture, will begin pre-sales on August 3. The single-motor variant offers 920 km CLTC range, while the tri-motor version delivers 780 km. This positions the Z9S as one of the longest-range EVs in production.",
+      "why_it_matters": "Denza sits on BYD's brand ladder below Yangwang but above BYD mainline, serving as the premium channel. The Z9S's 920 km range allows Denza to claim a leadership position in the long-range premium EV sedan segment, competing directly with NIO ET7, Xpeng P7, and Mercedes EQE. The imminent August 3 pre-sales event creates near-term competitive urgency for rivals. Daimler's involvement also gives Denza a potential export channel advantage for European markets seeking a premium Chinese EV with familiar JV branding.",
       "who_is_impacted": [
-        "XPeng（AI研发能力短期内受冲击，尤其是自动驾驶训练基础设施和大模型部署）",
-        "NIO/Li Auto（同样面临AI人才被全球科技巨头挖角的风险——需审视自身核心AI人才的留存策略）",
-        "BYD（虽然AI人才依赖度相对较低，但智能化升级战略需要同样的人才储备）",
-        "OpenAI（机器人部门吸纳有车规级AI落地经验的人才，加速其在自动驾驶领域的布局可能性）",
-        "所有在中国车企工作的顶级AI研究员（个人薪酬预期和职业路径预期将被此事件重塑）"
+        "NIO — ET7 range proposition ($70K+) challenged by Denza at potentially lower price point",
+        "Xpeng — P7 positioning faces another long-range competitor in the BYD ecosystem",
+        "Mercedes-Benz — EQE sales in China under pressure from JV partner's own brand",
+        "Li Auto — 920 km BEV range undermines EREV range advantage argument",
+        "BYD (Han/Seal) — internal cannibalization risk if Z9S draws demand from BYD-branded sedans"
       ],
       "next_actions": [
-        "小鹏应立即评估卢思远离职对自动驾驶训练基础设施、推理平台、数据飞轮等核心AI模块的短期影响，并启动内部替代方案",
-        "竞品应主动接触小鹏AI团队中可能受此事件影响的骨干成员——人才震荡期是猎头窗口",
-        "建议整个中国EV行业反思AI人才薪酬和留任机制——对比OpenAI级别薪资可能不现实，但可以通过股权激励/研发自主权/学术发表自由度等非薪资手段提升吸引力",
-        "行业可考虑建立联合AI人才池或共享基础设施以降低单一公司的人才依赖风险"
+        "Track Z9S pre-sales order volume in first week — key indicator of market reception",
+        "Compare Z9S pricing vs NIO ET7 — Denza likely to undercut and drive segment price pressure",
+        "Assess tri-motor vs single-motor order mix to gauge performance vs range preference",
+        "Monitor Daimler's role — is Mercedes using Denza channel to compete without damaging Three-Pointed-Star brand",
+        "Evaluate Z9S export potential to Southeast Asia and Europe under Denza or Daimler distribution",
+        "Determine power source — 920 km range suggests ~120-150 kWh pack using BYD Blade 2.0 cells"
       ],
       "risk_notes": [
-        "如果卢思远在OpenAI从事与自动驾驶相关的机器人研究，可能在未来形成XPeng在AI+机器人领域的直接竞争对手",
-        "更多中国EV AI人才跟进出走的连锁反应风险需要关注",
-        "此事件可能影响资本市场对XPeng AI能力的估值预期"
+        "CLTC 920 km translates to ~650-750 km WLTP / ~500-550 km EPA — consumer expectations must be managed",
+        "Large battery pack adds significant weight and cost, impacting efficiency and margins",
+        "Denza brand awareness outside China is very low — export faces brand-building challenge",
+        "Internal BYD vs Denza brand overlap could confuse consumers about positioning",
+        "Pre-sales volume may be inflated by deposit refundability — hard to gauge real demand from initial numbers"
       ],
       "references": [
-        "https://cnevpost.com/2026/07/20/xpeng-loses-ai-infra-chief-to-openai/"
+        {
+          "title": "Denza Z9S to begin pre-sales on August 3 with up to 920 km range",
+          "url": "https://cnevpost.com/2026/07/28/denza-z9s-pre-sales-aug-3/",
+          "source": "CnEVPost"
+        }
       ]
     },
     {
       "hotspot_id": "H10",
-      "title": "CALB电池缺陷致广汽Aion S车队大规模故障",
-      "what_changed": "中创新航(CALB)电池在行驶15万公里后触发广汽Aion S车队大规模故障，涉及安全性召回风险。这一事件暴露了电池长期循环后的衰减和安全隐患问题。",
-      "why_it_matters": "这是继2019-2021年间多次电动车自燃事件后，中国动力电池行业又一次大规模质量危机。CALB作为中国第三大动力电池供应商(仅次于CATL和BYD)，其电池产品的大规模故障将产生系统性冲击：1) 广汽作为CALB最大客户之一，Aion品牌形象直接受损；2) CALB的IPO估值和客户信任度面临严峻考验；3) 全行业的电池供应商切换风险意识将被重新唤醒——车企可能会加速电池供应链多元化以避免单点依赖。此事件也可能推动监管部门出台更严格的动力电池全生命周期追溯和质量标准。",
+      "title": "Huawei-Backed Stelato G9 Off-Road SUV Pre-Orders Open August 5",
+      "what_changed": "The Stelato G9, a Huawei-backed large off-road SUV measuring 5.2 meters, will open pre-orders on August 5. This extends the Huawei automotive ecosystem (already successful via the Aito brand partnership with Seres) into the luxury off-road SUV segment, competing with vehicles like the Tank series, Lexus LX, and Land Rover Defender.",
+      "why_it_matters": "Huawei is systematically expanding its 'Huawei Inside' and 'Harmony Smart Mobility' ecosystem across vehicle segments — sedans (Aito S series), SUVs (Aito M series), and now off-road SUVs (Stelato). The G9 targets the rapidly growing Chinese outdoor/lifestyle segment, where consumers increasingly demand premium off-road capability with smart cabin technology. Huawei's brand power in consumer electronics gives it an edge over traditional off-road brands in attracting tech-savvy Chinese SUV buyers.",
       "who_is_impacted": [
-        "GAC（Aion品牌受到直接冲击，需承担召回成本和品牌修复成本）",
-        "CALB（核心产品质量危机，面临客户流失、订单减少和潜在索赔）",
-        "CATL/BYD（竞争对手可能直接承接CALB流失的订单，市场份额进一步集中）",
-        "所有使用CALB电池的车企（需立即自查是否存在类似隐患）",
-        "保险行业（将重新评估搭载CALB电池车辆的保险定价）"
+        "Great Wall Motors (Tank series) — dominant Chinese off-road SUV brand faces new smart-tech competitor",
+        "BYD (Fang Cheng Bao / Leopard series) — off-road sub-brand competes with Stelato in same segment",
+        "Land Rover / JLR — Defender sales in China under pressure from smart off-road alternatives",
+        "Toyota (Land Cruiser Prado) — luxury off-road loyalists may consider Stelato for tech features",
+        "CATL — potential battery supplier for Stelato G9; Huawei ecosystem expands",
+        "Xpeng, NIO — no off-road SUV in portfolio; segment expansion gap vs Huawei ecosystem"
       ],
       "next_actions": [
-        "广汽应立即启动官方的召回方案和车主沟通机制，将负面影响控制在可管理范围内——拖延回应会加剧品牌损害",
-        "使用CALB电池的其他车企应紧急进行内部质量审计，尤其是行驶里程接近15万公里的车队",
-        "竞品应主动发布自身电池安全数据(如循环寿命测试结果、安全认证等)以建立对比性差异化",
-        "行业应推动建立电池全周期(从出厂到退役)的可追溯数据标准，将电池健康状态纳入车辆OTA监控系统",
-        "建议电池采购团队重新评估对CALB的采购占比——分散供应商集中度是当前首要的安全举措"
+        "Identify Stelato manufacturing partner (likely BAIC or other state-owned OEM) and production capacity",
+        "Compare G9 dimensions and expected specs vs Tank 500 and Fang Cheng Bao Bao 5",
+        "Track pre-order numbers in first week to gauge off-road segment reception of Huawei tech",
+        "Assess Huawei's autonomous driving integration in off-road context (off-road ADAS capabilities)",
+        "Monitor Huawei retail channel expansion — are Stelato models available in Huawei stores alongside Aito"
       ],
       "risk_notes": [
-        "故障原因尚未官方确认——如果是设计缺陷而非制造缺陷，修复难度和成本将大幅增加",
-        "15万公里的故障阈值意味着大量在运营车辆(出租车/网约车)将集中爆发问题",
-        "此事件可能被海外媒体放大报道，影响全球市场对中国动力电池产品的信心",
-        "不排除CALB面临司法诉讼和监管处罚的风险"
+        "Off-road SUVs have unique engineering requirements (body-on-frame, low-end torque, durability) — Huawei's software expertise doesn't automatically ensure good off-road performance",
+        "Over-reliance on Huawei brand — if Huawei faces sanctions escalation, Stelato brand could be collateral damage",
+        "5.2m length limits parking feasibility in urban Chinese settings, narrowing addressable market",
+        "Pre-order conversion rate may be low — off-road segment buyers are more deliberate, require test drives",
+        "Fuel consumption / energy efficiency regulation — large off-road EVs face punitive weight-based taxes in some provinces"
       ],
       "references": [
-        "https://carnewschina.com/2026/07/21/calb-battery-issues-trigger-massice-failures-in-gac-aion-s-fleet/"
+        {
+          "title": "Huawei-backed Stelato G9 off-road SUV to open pre-orders on August 5",
+          "url": "https://cnevpost.com/2026/07/28/stelato-g9-open-pre-orders-aug-5/",
+          "source": "CnEVPost"
+        }
       ]
     },
     {
       "hotspot_id": "H11",
-      "title": "本田与广汽合资企业延长至2038年",
-      "what_changed": "本田与广汽签署协议将合资公司广汽本田的合作期限延长至2038年，但同时本田在中国的销量处于下滑通道中——合资续约发生在传统合资车企在华整体被自主品牌EV挤压的背景下。",
-      "why_it_matters": "本田续约20年是一个信号复杂的战略决策：一方面说明本田不打算放弃中国市场(尽管销量下滑)且对长期合作保持承诺；另一方面，2038年这个时间窗口意味着本田计划至少在中国再经营15年燃油/混动/EV业务——这对于押注'中国合资车企将快速衰落'的市场预期是一种纠偏。本田可能希望通过续约换取在电动化技术转让、出口基地建设等方面的更大自主权。此种'续约≠复兴'的走势值得其他合资车企(日产/福特/通用)参考。",
+      "title": "GAC Aion Launches New Ray Series with Ray 7 Electric Sedan",
+      "what_changed": "GAC Aion launched a new product series called 'Ray', with the first model being the Ray 7 — a mid-to-large size electric sedan targeting young buyers. This expands GAC Aion's portfolio beyond its existing Aion S, V, Y, and Hyper Hao models, creating a new sub-brand line aimed at a different demographic.",
+      "why_it_matters": "GAC Aion is one of China's top EV sellers by volume, and the new Ray series signals a strategic push to capture the young, first-time EV buyer demographic — a segment critical for long-term brand loyalty. By launching a dedicated series (rather than a single model refresh), GAC Aion is building brand architecture for future models. This mirrors the strategy of smartphone OEMs launching sub-brands for different age cohorts. The mid-to-large form factor for a 'first car' buyer also suggests aggressive pricing to attract value-conscious younger consumers.",
       "who_is_impacted": [
-        "GAC（获得本田品牌的持续赋能和现金流支持，但同时也承担了电动化转型中合资伙伴拖后腿的风险）",
-        "Honda（赢得中国市场继续经营的时间窗口，但若EV转型不力，续约的意义将大打折扣）",
-        "Dongfeng Honda（本田另一家合资伙伴可能面临广汽本田获得更多资源倾斜的风险）",
-        "NIO/XPeng/Li Auto（合资品牌续约不等于电动化成功——自主品牌仍享有创新速度优势）",
-        "BYD/Geely（合资续约意味着竞争格局不会快速清零，需要长期应对本田的产品迭代）"
+        "BYD — Seal/Seagull lineup faces another young-targeting competitor",
+        "Xpeng — P5/Mona positioning overlaps with Ray series demographic",
+        "Tesla — Model 3's Chinese younger-buyer appeal challenged by local alternatives",
+        "NIO (Onvo sub-brand) — premium-lite strategy competes for similar young affluent buyers",
+        "Xiaomi SU7 — strong overlap with tech-savvy young buyer demographic"
       ],
       "next_actions": [
-        "建议分析本田续约的具体条件——是否有电动化产品投放承诺或出口基地建设条款，这将揭示本田中国的真实电动化时间表",
-        "竞品应关注本田中国未来3年的EV产品管线规划——如果续约伴随着大规模的EV产线投资，说明本田是认真入局而非防守性续约",
-        "建议评估本田中国是否会将合资工厂作为全球出口基地(出口到东南亚/中东等市场)——这将改变本田全球供应链格局",
-        "其他合资车企(日产/福特/通用)应密切关注广汽本田续约后的业绩表现——如果续约后仍持续下滑，可能加速其他合资企业的拆分或重组"
+        "Identify Ray 7 pricing once announced — critical indicator of GAC Aion's margin strategy for volume",
+        "Compare Ray 7 specs vs BYD Seal (same mid-to-large sedan segment)",
+        "Track Ray series naming pattern — Ray 5, Ray 3 expected in future as sub-brand scales",
+        "Assess GAC Aion's distribution strategy for Ray series — separate showrooms vs Aion existing network",
+        "Monitor GAC Aion's profitability trajectory — new series investment needs to deliver volume lift"
       ],
       "risk_notes": [
-        "续约20年可能让本田对电动化转型产生'还有时间'的错觉，延缓实质性的EV投入",
-        "两家合资伙伴(广汽+东风)在电动车投放上的博弈可能导致产品规划内耗",
-        "如果中国EV渗透率持续快速提升，2038年的燃油车产能可能成为严重的沉没成本"
+        "GAC Aion already has multiple model lines (Aion S/V/Y/Hyper) — Ray series adds brand complexity without necessarily expanding market",
+        "Mid-to-large sedan segment in China is the most competitive EV segment — dozens of options",
+        "Young buyer demographic has lower average transaction value, pressuring per-unit margins",
+        "GAC Aion's unprofitable status means Ray series must deliver volume quickly or risk cash burn acceleration",
+        "Brand differentiation challenge — how Ray is distinct from Aion S/ V series unclear without clear spec gap"
       ],
       "references": [
-        "https://cnevpost.com/2026/07/20/honda-gac-extend-jv-to-2038/"
+        {
+          "title": "GAC Aion launches new Ray series, names first model Ray 7",
+          "url": "https://cnevpost.com/2026/07/28/gac-aion-launches-new-ray-series/",
+          "source": "CnEVPost"
+        }
       ]
     },
     {
       "hotspot_id": "H12",
-      "title": "丰田下一代Corolla EV转型亮相",
-      "what_changed": "丰田以'危机感'(sense of crisis)为驱动力推进下一代Corolla纯电版研发——Corolla作为全球最畅销车系(累计销量超5,000万辆)的电动化转型具有标志性意义，标志着丰田从'混动优先'到'纯电正视'的战略心态转变。",
-      "why_it_matters": "Corolla纯电化是丰田电动化战略从'说'到'做'的关键验证节点。丰田此前一直以混动+氢能为优先路线，对纯电态度保守。Corolla EV的出现意味着丰田终于承认：纯电不是过渡方案而是主流终局。这对全球汽车市场格局的影响是结构性的：1) Corolla的体量(年销超100万辆)将创造巨大的纯电需求，冲击全球电池供应链；2) 丰田的制造品质和供应链管理能力一旦加持纯电产品，将比新势力在规模化生产方面更具优势；3) 对于还在犹豫是否全面转向纯电的传统车企(尤其是日系车企)来说，丰田的转向是一个强烈的行业信号。",
+      "title": "CATL Net Profit Jumps 42% — Battery Giant's Financial Strength",
+      "what_changed": "CATL, the world's largest EV battery manufacturer, reported a 42% year-over-year net profit increase. The company supplies not only the massive Chinese EV industry but has increasingly become a critical supplier for Western automakers, surpassing LG Energy Solution and Panasonic in global market share.",
+      "why_it_matters": "CATL's 42% profit growth confirms that EV battery demand remains robust despite global economic headwinds, tariff uncertainties, and OEM EV production adjustments. As the dominant supplier (~37% global market share), CATL's financial health is a bellwether for the entire EV supply chain. Strong margins also give CATL pricing power and R&D investment capacity to maintain its technology lead. For Western OEMs, this creates strategic dependency — they must balance cost-competitive CATL batteries with supply chain diversification goals (a tension that drives the US IRA/EU battery localization push).",
       "who_is_impacted": [
-        "BYD（秦家族+海豚在紧凑型轿车市场将面临Corolla EV的全球竞争）",
-        "Tesla（Model 2/紧凑型车型若未及时推出，将错失Corolla级别的巨大市场）",
-        "Volkswagen（ID.3在全球紧凑型EV市场被Corolla EV直接对标）",
-        "Honda/Nissan（Civic/Sentra的电动化转型压力倍增）",
-        "所有依赖Corolla零部件供应的Tier 1/2供应商（必须加速EV相关产品转型以守住丰田订单）"
+        "LG Energy Solution, Panasonic, Samsung SDI — competitive pressure from CATL's scale and margins",
+        "Tesla — CATL is a key supplier; profit growth signals continued strong relationship but also potential pricing leverage shift",
+        "BYD (FinDreams Battery) — CATL's profit strength underscores the value of being the battery cost leader",
+        "Ford, GM, BMW, Mercedes — CATL customers facing supply diversification pressure from home governments",
+        "US and EU policymakers — CATL's dominance reinforces arguments for battery supply chain localization subsidies"
       ],
       "next_actions": [
-        "建议在Corolla EV正式发布前通过供应链渠道获取其平台信息(BYD e平台合作还是自研)——这将是判断丰田EV战略是'真干'还是'应付'的核心指标",
-        "竞品应关注Corolla EV的定价——如果丰田能以Corolla的规模效应将EV定价压到25,000美元以下，将对所有竞品形成毁灭性打击",
-        "建议分析丰田'危机感'的来源——是中国市场份额流失还是欧洲合规压力——以判断该战略的持续性和深度",
-        "电池供应商应积极接触丰田Corolla EV的电池供应订单——其年销规模足以重塑一家电池厂商的产能规划"
+        "Analyze CATL profit drivers — volume growth vs margin expansion vs mix shift to higher-margin products (LFP vs NMC, sodium-ion)",
+        "Track CATL capex guidance — new factory announcements in Hungary, Indonesia, and US (if any) signal capacity strategy",
+        "Assess CATL technology roadmap — condensed battery, sodium-ion, and solid-state timelines",
+        "Monitor Western OEM battery sourcing announcements — are they extending CATL contracts or diversifying to Korean/Japanese suppliers",
+        "Evaluate CATL's vertical integration (lithium mining, recycling) contributions to margin expansion"
       ],
       "risk_notes": [
-        "丰田此前多次宣称加速电动化但实际进展缓慢——'危机感'叙事可能仍是公关话术而非实质性战略转变",
-        "如果Corolla EV仍然采用丰田自研的bZ平台(而非更具竞争力的技术方案)，产品力可能仍不及中国品牌同价位竞品",
-        "Corolla EV的发布到大规模量产之间至少存在18-24个月的time-to-market窗口"
+        "Geopolitical risk is the primary overhang — US/EU forced localization could reduce CATL's addressable market in developed markets",
+        "42% profit growth may attract anti-monopoly scrutiny or tariff retaliation",
+        "Lithium price volatility — CATL's hedging/manufacturing cost control tested if lithium prices spike",
+        "Over-reliance on Chinese domestic demand for majority of revenue — China EV growth slowdown would directly impact CATL",
+        "Technology disruption risk — solid-state batteries from competitors (Toyota, Samsung) could challenge CATL's LFP/NMC dominance by 2030",
+        "Margin sustainability — high profitability invites new entrants and capacity overbuild, driving down margins over time"
       ],
       "references": [
-        "https://electrek.co/2026/07/20/toyota-next-gen-corolla-ev-crisis-grows/"
+        {
+          "title": "CATL Net Profit Jumps 42%",
+          "url": "https://cleantechnica.com/2026/07/28/catl-net-profit-jumps-42/",
+          "source": "CleanTechnica"
+        }
       ]
     }
   ]
