@@ -4,167 +4,196 @@
   "hotspots": [
     {
       "hotspot_id": "H01",
-      "title": "BYD密集发布多款新车：Denza Z9S/豹7/秦Max/Atto 3",
-      "summary": "BYD旗下Denza Z9S轿跑内饰曝光（1,194 HP）、Fang Cheng Bao Tai 7上市10个月销量破20万、Qin Max旗舰轿车细节公布、Atto 3升级版开启预售，多款车型密集刷新产品线。",
+      "title": "BYD Racco K-Car Launch in Japan — World's First SDV Kei EV",
+      "summary": "BYD launched the Racco all-electric K-Car in Japan, starting at ~$13,100 USD. It is positioned as the 'world's first SDV-based' light EV, directly competing with Toyota, Honda, and Nissan on their home turf. The model offers up to 320 km WLTC range and qualifies for Japanese subsidies that bring the price below 2 million yen. Covered by 3 platforms.",
       "category": "trend",
-      "overall_heat_score": 92,
+      "overall_heat_score": 87,
       "coverage": {
-        "source_count": 4,
+        "source_count": 3,
         "companies": [
           "BYD"
         ],
         "platforms": [
           "carnewschina",
           "cnevpost",
-          "thedriven"
-        ]
-      },
-      "should_chase": "yes",
-      "chase_rationale": [
-        "BYD多车型同时发力覆盖多个细分市场",
-        "S级信号3条+跨平台3个",
-        "Fang Cheng Bao 200k销量验证市场接受度"
-      ],
-      "samples": [
-        {
-          "platform": "carnewschina",
-          "title": "BYD Denza Z9S cabin revealed, 1,194 HP sedan keeps physical buttons, with flash charging",
-          "url": "https://carnewschina.com/2026/07/20/byd-denza-z9s-cabin-revealed-1194-hp-sedan-keeps-physical-buttons/",
-          "published_at": "2026-07-20T17:21:58Z",
-          "company": "BYD",
-          "signal_level": "S"
-        },
-        {
-          "platform": "cnevpost",
-          "title": "BYD Fang Cheng Bao Tai 7 surpasses 200,000 sales in about 10 months",
-          "url": "https://cnevpost.com/2026/07/20/byd-fang-cheng-bao-tai-7-200000-sales/",
-          "published_at": "2026-07-20T03:30:41Z",
-          "company": "BYD",
-          "signal_level": "S"
-        },
-        {
-          "platform": "cnevpost",
-          "title": "BYD offers closer look at Qin Max, flagship of its hot-selling Qin family",
-          "url": "https://cnevpost.com/2026/07/20/byd-offers-closer-look-qin-max/",
-          "published_at": "2026-07-20T03:00:21Z",
-          "company": "BYD",
-          "signal_level": "S"
-        },
-        {
-          "platform": "thedriven",
-          "title": "BYD seeks early interest in upgraded Atto 3, with more power and premium interior",
-          "url": "https://thedriven.io/2026/07/21/byd-seeks-early-interest-in-upgraded-atto-3-with-more-power-and-premium-interior/?utm_source=rss&utm_medium=rss&utm_campaign=byd-seeks-early-interest-in-upgraded-atto-3-with-more-power-and-premium-interior",
-          "published_at": "2026-07-20T23:03:46Z",
-          "company": "BYD",
-          "signal_level": "B"
-        }
-      ]
-    },
-    {
-      "hotspot_id": "H02",
-      "title": "特斯拉密集争议：Robotaxi事故/FSD罚单/Autopilot天价裁决",
-      "summary": "特斯拉24小时内爆发多起事件：Houston Robotaxi远程操作员撞车事故(NHTSA数据曝光)、FSD系统导致车主超速罚单且Tesla拒绝修复、佛罗里达总检察长要求撤销2.43亿美元Autopilot碰撞裁决、Cybercab集成Starlink天线。",
-      "category": "trend",
-      "overall_heat_score": 95,
-      "coverage": {
-        "source_count": 4,
-        "companies": [
-          "Tesla"
-        ],
-        "platforms": [
           "electrek"
         ]
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "多起事件同时爆发引发集中关注",
-        "涉及自动驾驶安全性核心争议",
-        "NHTSA数据背书+法律层面博弈"
+        "Cross-platform resonance (3 sources: S, S, A)",
+        "BYD entering Japanese market directly vs legacy OEMs",
+        "World-first SDV kei EV with aggressive pricing"
       ],
       "samples": [
         {
+          "platform": "carnewschina",
+          "title": "Japan's first 320 km electric K-Car isn't Japanese: BYD Racco launches from 13,100 USD",
+          "url": "https://carnewschina.com/2026/07/28/japans-first-320-km-electric-k-car-isnt-japanese-byd-racco-launches-from-14200-usd/",
+          "published_at": "2026-07-28T03:30:44Z",
+          "company": "BYD",
+          "signal_level": "S"
+        },
+        {
+          "platform": "cnevpost",
+          "title": "BYD takes on Toyota, Honda, and Nissan on their home turf with all-electric K-Car Racco",
+          "url": "https://cnevpost.com/2026/07/28/byd-launches-k-car-racco-japan/",
+          "published_at": "2026-07-28T03:19:52Z",
+          "company": "BYD",
+          "signal_level": "S"
+        },
+        {
           "platform": "electrek",
-          "title": "Tesla puts Starlink antenna in Cybercab",
-          "url": "https://electrek.co/2026/07/20/tesla-starlink-cybercab-integration-why/",
-          "published_at": "2026-07-21T00:25:21Z",
-          "company": "Tesla",
+          "title": "BYD launches the 'world's first' SDV kei EV, starting at just $13,000",
+          "url": "https://electrek.co/2026/07/28/byd-launches-worlds-first-sdv-kei-ev-starting-at-13000/",
+          "published_at": "2026-07-28T14:35:20Z",
+          "company": "BYD",
+          "signal_level": "A"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H02",
+      "title": "BYD Da Han Flagship EV with 1,008km Range & Seal 06 LIDAR Refresh",
+      "summary": "BYD confirmed its new flagship electric sedan (Da Han / Great Han) will offer over 1,000 km of range, while the popular Seal 06 receives a 2027 refresh featuring LIDAR integration. Both developments signal BYD's continued technology leadership in range and autonomous driving hardware.",
+      "category": "trend",
+      "overall_heat_score": 78,
+      "coverage": {
+        "source_count": 2,
+        "companies": [
+          "BYD"
+        ],
+        "platforms": [
+          "cleantechnica",
+          "electrek"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "Cross-platform resonance (2 sources)",
+        "Flagship EV exceeding 1,000 km range is industry milestone",
+        "Seal 06 LIDAR addition democratizes ADAS tech"
+      ],
+      "samples": [
+        {
+          "platform": "cleantechnica",
+          "title": "2027 BYD Seal 06 Gets Lidar, BYD Da Han Gets 1,008-km Range",
+          "url": "https://cleantechnica.com/2026/07/27/2027-byd-seal-06-gets-lidar-byd-da-han-gets-1008-km-range/",
+          "published_at": "2026-07-27T23:19:33Z",
+          "company": "BYD",
           "signal_level": "A"
         },
         {
           "platform": "electrek",
-          "title": "Tesla ‘Full Self-Driving’ got me a speeding ticket, and Tesla killed the fix",
-          "url": "https://electrek.co/2026/07/20/tesla-fsd-speeding-ticket-removed-speed-setting/",
-          "published_at": "2026-07-20T20:01:16Z",
-          "company": "Tesla",
+          "title": "BYD's new flagship EV breaks cover for the first time with over 1,000 km of range [Video]",
+          "url": "https://electrek.co/2026/07/27/byd-reveals-new-flagship-ev-range-1008-km-video/",
+          "published_at": "2026-07-27T20:58:03Z",
+          "company": "BYD",
           "signal_level": "A"
         },
         {
           "platform": "electrek",
-          "title": "Florida AG asks court to erase Tesla’s $243M Autopilot crash verdict",
-          "url": "https://electrek.co/2026/07/20/florida-ag-tesla-243m-autopilot-verdict/",
-          "published_at": "2026-07-20T14:20:41Z",
-          "company": "Tesla",
-          "signal_level": "A"
-        },
-        {
-          "platform": "electrek",
-          "title": "Tesla remote operator crashed a ‘Robotaxi’ in Houston, NHTSA data shows",
-          "url": "https://electrek.co/2026/07/20/tesla-robotaxi-remote-operator-crash-houston/",
-          "published_at": "2026-07-20T13:15:01Z",
-          "company": "Tesla",
+          "title": "BYD reveals new Seal 06 EV images ahead of launch",
+          "url": "https://electrek.co/2026/07/27/byd-reveals-new-seal-06-ev-images-launch/",
+          "published_at": "2026-07-27T17:41:51Z",
+          "company": "BYD",
           "signal_level": "A"
         }
       ]
     },
     {
       "hotspot_id": "H03",
-      "title": "蔚来Firefly首发Halo系列+ES8交付里程碑",
-      "summary": "NIO Firefly推出设计驱动型Halo系列首款车型，同周ES8第13万辆即将交付，5座版本重振销量势头。",
+      "title": "BYD Confirms Humanoid Robot Unveiling in August",
+      "summary": "BYD confirmed plans to unveil a humanoid robot in August, revealed via China Securities Journal and a WeChat teaser from its Di Space Zhengzhou channel. The move aligns with a broader industry trend of EV makers diversifying into robotics, as also seen with Unitree's price war driving down humanoid costs.",
       "category": "trend",
-      "overall_heat_score": 82,
+      "overall_heat_score": 72,
       "coverage": {
         "source_count": 2,
         "companies": [
-          "NIO"
+          "BYD"
         ],
         "platforms": [
-          "cnevpost"
+          "cnevpost",
+          "cleantechnica"
         ]
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "Firefly Halo系列为全新产品线",
-        "ES8交付里程碑验证高端SUV持续需求"
+        "Cross-platform coverage (S + A levels)",
+        "BYD diversifying beyond EVs into robotics",
+        "Humanoid robot trend intersecting with EV ecosystem"
       ],
       "samples": [
         {
           "platform": "cnevpost",
-          "title": "Nio Firefly launches first model of design-driven Halo series",
-          "url": "https://cnevpost.com/2026/07/20/nio-firefly-launches-first-model-halo-series/",
-          "published_at": "2026-07-20T12:38:19Z",
-          "company": "NIO",
+          "title": "BYD confirms plan to unveil humanoid robot in August",
+          "url": "https://cnevpost.com/2026/07/28/byd-confirms-plan-humanoid-robot-aug/",
+          "published_at": "2026-07-28T06:38:25Z",
+          "company": "BYD",
           "signal_level": "S"
         },
         {
-          "platform": "cnevpost",
-          "title": "Nio to deliver 130,000th new ES8 this week as 5-seat variant revives momentum",
-          "url": "https://cnevpost.com/2026/07/20/nio-to-deliver-130000th-new-es8-this-week/",
-          "published_at": "2026-07-20T05:48:08Z",
-          "company": "NIO",
-          "signal_level": "S"
+          "platform": "cleantechnica",
+          "title": "BYD Continuing the Robot Craze — Is This Like The Smartphone Revolution Or VR Headsets?",
+          "url": "https://cleantechnica.com/2026/07/28/byd-continuing-the-robot-craze-is-this-like-the-smartphone-revolution-or-vr-headsets/",
+          "published_at": "2026-07-28T13:22:03Z",
+          "company": "BYD",
+          "signal_level": "A"
         }
       ]
     },
     {
       "hotspot_id": "H04",
-      "title": "Smart #2全球测试启动，即将亮相巴黎车展",
-      "summary": "Smart #2纯电车型进入全球测试阶段，将在巴黎车展上首次公开亮相，跨来源（CnEVPost + CarNewsChina）同步报道确认。",
+      "title": "Baidu Apollo Go Robotaxi Road Tests in London via Lyft Freenow",
+      "summary": "Baidu's Apollo Go autonomous driving unit has started road tests of its RT6 vehicles in London's Brent borough with safety operators. The service will be available on Lyft's Freenow mobility network, with public rides expected in 2027. This marks a major expansion of Chinese autonomous driving tech into Europe.",
+      "category": "trend",
+      "overall_heat_score": 76,
+      "coverage": {
+        "source_count": 2,
+        "companies": [
+          "Baidu",
+          "Lyft"
+        ],
+        "platforms": [
+          "cnevpost",
+          "techcrunch-transport"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "Cross-platform coverage (S + B levels)",
+        "Chinese robotaxi entering European market",
+        "Lyft/Freenow partnership provides distribution channel"
+      ],
+      "samples": [
+        {
+          "platform": "cnevpost",
+          "title": "Baidu Apollo Go starts robotaxi road tests in London, public rides in 2027",
+          "url": "https://cnevpost.com/2026/07/28/baidu-apollo-go-robotaxi-road-tests-london/",
+          "published_at": "2026-07-28T09:38:06Z",
+          "company": "Baidu",
+          "signal_level": "S"
+        },
+        {
+          "platform": "techcrunch-transport",
+          "title": "Lyft and Baidu enter London's robotaxi battleground as testing begins",
+          "url": "https://techcrunch.com/2026/07/28/lyft-and-baidu-enter-londons-robotaxi-battleground-as-testing-begins/",
+          "published_at": "2026-07-28T08:00:00Z",
+          "company": "Baidu",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H05",
+      "title": "Zeekr Launches 5-Seat 9X Flagship Luxury SUV in China",
+      "summary": "Zeekr launched the 5-seat variant of its 9X flagship SUV in China, priced from 451,900 yuan (~$66,530). The vehicle boasts a 70 kWh battery and up to 1,030 kW (1,381 hp) output. The 5-seat version is priced below the 6-seat variant to sustain luxury SUV sales momentum.",
       "category": "trend",
       "overall_heat_score": 75,
       "coverage": {
         "source_count": 2,
         "companies": [
-          "Smart"
+          "Zeekr"
         ],
         "platforms": [
           "carnewschina",
@@ -173,223 +202,146 @@
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "S级信号2条+跨平台验证",
-        "巴黎车展全球首发事件可预期性强"
+        "Dual S-level coverage from dedicated China EV sources",
+        "Zeekr expanding luxury EV SUV lineup",
+        "Significant powertrain specs (1,381 hp)"
       ],
       "samples": [
-        {
-          "platform": "cnevpost",
-          "title": "Smart puts #2 EV through global testing ahead of Paris Motor Show debut",
-          "url": "https://cnevpost.com/2026/07/20/smart-2-ev-global-testing/",
-          "published_at": "2026-07-20T09:18:45Z",
-          "company": "Smart",
-          "signal_level": "S"
-        },
         {
           "platform": "carnewschina",
-          "title": "Smart #2 EV enters global testing ahead of Paris Motor Show debut",
-          "url": "https://carnewschina.com/2026/07/20/smart-2-ev-enters-global-testing-ahead-of-paris-motor-show-debut/",
-          "published_at": "2026-07-20T07:59:01Z",
-          "company": "",
+          "title": "Five-seat Zeekr 9X flagship SUV launched at 69,745 USD in China",
+          "url": "https://carnewschina.com/2026/07/28/five-seat-zeekr-9x-flagship-suv-launched-at-69745-usd-in-china/",
+          "published_at": "2026-07-28T04:52:00Z",
+          "company": "Zeekr",
           "signal_level": "S"
-        }
-      ]
-    },
-    {
-      "hotspot_id": "H05",
-      "title": "现代IONIQ 5热销且50亿美元电池工厂投产",
-      "summary": "现代IONIQ 5在经销商处快速脱销、库存日益紧张；同时现代50亿美元电池工厂正式投产，年产能可支持30万辆电动汽车。",
-      "category": "trend",
-      "overall_heat_score": 78,
-      "coverage": {
-        "source_count": 2,
-        "companies": [
-          "Hyundai"
-        ],
-        "platforms": [
-          "electrek"
-        ]
-      },
-      "should_chase": "yes",
-      "chase_rationale": [
-        "需求热销+产能扩张双利好",
-        "现代北美EV战略加速"
-      ],
-      "samples": [
-        {
-          "platform": "electrek",
-          "title": "The Hyundai IONIQ 5 is flying off dealer lots, and it’s getting harder to find",
-          "url": "https://electrek.co/2026/07/20/hyundai-ioniq-5-selling-fast-dealers-running-out/",
-          "published_at": "2026-07-20T21:39:42Z",
-          "company": "Hyundai",
-          "signal_level": "A"
         },
         {
-          "platform": "electrek",
-          "title": "Hyundai’s $5B battery plant opens with enough capacity to power 300,000 EVs a year",
-          "url": "https://electrek.co/2026/07/20/hyundais-5b-battery-plant-opens-capacity-300k-evs/",
-          "published_at": "2026-07-20T19:14:55Z",
-          "company": "Hyundai",
-          "signal_level": "A"
+          "platform": "cnevpost",
+          "title": "Zeekr launches 5-seat 9X to sustain luxury SUV sales momentum",
+          "url": "https://cnevpost.com/2026/07/28/zeekr-launches-5-seat-9x/",
+          "published_at": "2026-07-28T03:55:07Z",
+          "company": "Zeekr",
+          "signal_level": "S"
         }
       ]
     },
     {
       "hotspot_id": "H06",
-      "title": "全球电动汽车充电基础设施加速扩张",
-      "summary": "Pilot充电网络达300站点、欧盟充电建设远超销量增速、Allego迁移至AMPECO系统覆盖16国、英国Char.gy部署3000个路侧充电桩、Circontrol品牌整合，全球充电基础设施呈加速扩张态势。",
+      "title": "BMW Planning i4 Electric Convertible for 2028",
+      "summary": "BMW is planning an all-electric i4 Convertible for 2028, according to reports from BMWBLOG citing internal sources. The two-door, four-seat EV convertible will feature a power-folding soft-top. This fills a unique niche in the premium EV market as one of the few electric convertibles announced.",
       "category": "trend",
-      "overall_heat_score": 88,
+      "overall_heat_score": 64,
       "coverage": {
-        "source_count": 5,
+        "source_count": 2,
         "companies": [
-          "Allego",
-          "Char.gy",
-          "Circontrol"
+          "BMW"
         ],
         "platforms": [
-          "chargedevs",
-          "cleantechnica",
+          "electrek",
           "insideevs"
         ]
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "跨5个来源+3个平台共振",
-        "覆盖欧洲/美国/英国多市场",
-        "充电基建是EV普及的关键瓶颈指标"
+        "Cross-platform coverage from two top EV outlets",
+        "Unique product category (EV convertible) with few competitors",
+        "Premium segment expansion for BMW EV lineup"
       ],
       "samples": [
         {
+          "platform": "electrek",
+          "title": "BMW is finally making the electric convertible we've been waiting for",
+          "url": "https://electrek.co/2026/07/27/bmw-i4-electric-convertible-2028/",
+          "published_at": "2026-07-28T00:46:57Z",
+          "company": "BMW",
+          "signal_level": "A"
+        },
+        {
           "platform": "insideevs",
-          "title": "Pilot's EV Charging Network Isn't Slowing Down. It Just Hit 300 Locations",
-          "url": "https://insideevs.com/news/802174/pilot-flying-j-ev-chargers-expansion-2026/",
-          "published_at": "2026-07-20T12:29:29Z",
-          "company": "",
+          "title": "BMW Is Finally Planning An Electric Convertible: Report",
+          "url": "https://insideevs.com/news/802883/electric-bmw-i4-convertible/",
+          "published_at": "2026-07-27T20:57:29Z",
+          "company": "BMW",
           "signal_level": "A"
-        },
-        {
-          "platform": "cleantechnica",
-          "title": "Charging Infrastructure Has Far Outpaced EV Sales In All But One EU Country — Analysis",
-          "url": "https://cleantechnica.com/2026/07/20/charging-infrastructure-has-far-outpaced-ev-sales-in-all-but-one-eu-country-analysis/",
-          "published_at": "2026-07-20T07:00:05Z",
-          "company": "",
-          "signal_level": "A"
-        },
-        {
-          "platform": "chargedevs",
-          "title": "Allego migrates its 16-country European public charging network to the AMPECO charging management platform",
-          "url": "https://chargedevs.com/newswire/allego-migrates-its-16-country-european-public-charging-network-to-the-ampeco-charging-management-platform/",
-          "published_at": "2026-07-20T15:49:24Z",
-          "company": "Allego",
-          "signal_level": "B"
-        },
-        {
-          "platform": "chargedevs",
-          "title": "Char.gy to deploy 3,000 on-street EV chargers in West Northamptonshire, UK",
-          "url": "https://chargedevs.com/newswire/char-gy-to-deploy-3000-on-street-ev-chargers-in-west-northamptonshire-uk/",
-          "published_at": "2026-07-20T13:40:00Z",
-          "company": "Char.gy",
-          "signal_level": "B"
-        },
-        {
-          "platform": "chargedevs",
-          "title": "Circontrol’s EV charging products to be marketed under the Circutor brand",
-          "url": "https://chargedevs.com/newswire/circontrols-ev-charging-products-to-be-marketed-under-the-circutor-brand/",
-          "published_at": "2026-07-20T15:44:57Z",
-          "company": "Circontrol",
-          "signal_level": "B"
         }
       ]
     },
     {
       "hotspot_id": "H07",
-      "title": "电动车市场里程碑：中国燃油车崩溃+欧洲EV首次超越燃油车",
-      "summary": "两大关键信号：6月中国EV销量报告显示燃油车市场加速崩溃；欧洲最大汽车市场EV销量首次超越汽油+柴油车，电动车全球化进程迈过重要节点。",
-      "category": "trend",
-      "overall_heat_score": 90,
+      "title": "Xiaomi Skynomad EREV Specs Revealed: 5.7L/100km Economy, July 30 Debut",
+      "summary": "Xiaomi Auto detailed the Skynomad Kunlun Range Extender (EREV) with 5.7L/100km fuel consumption, 92-octane gas compatibility, and 416 HP output ahead of its July 30 debut. This marks Xiaomi's expansion beyond pure BEVs into the extended-range EV segment.",
+      "category": "single",
+      "overall_heat_score": 80,
       "coverage": {
-        "source_count": 2,
-        "companies": [],
-        "platforms": [
-          "cleantechnica",
-          "insideevs"
-        ]
-      },
-      "should_chase": "yes",
-      "chase_rationale": [
-        "两大洲同现EV历史性突破",
-        "中国+欧洲占全球EV销量70%以上",
-        "A级信号交叉验证趋势"
-      ],
-      "samples": [
-        {
-          "platform": "cleantechnica",
-          "title": "The Big ICE Meltdown — June’s China EV Sales Report",
-          "url": "https://cleantechnica.com/2026/07/20/the-big-ice-meltdown-junes-china-ev-sales-report/",
-          "published_at": "2026-07-21T01:07:43Z",
-          "company": "",
-          "signal_level": "A"
-        },
-        {
-          "platform": "insideevs",
-          "title": "EVs Just Beat Gas And Diesel In Europe’s Biggest Car Market For The First Time",
-          "url": "https://insideevs.com/news/802162/evs-outsold-gas-hybrid-diesel-germany/",
-          "published_at": "2026-07-20T10:09:33Z",
-          "company": "",
-          "signal_level": "A"
-        }
-      ]
-    },
-    {
-      "hotspot_id": "H08",
-      "title": "奇瑞Exeed Exlantix ES 2027款与捷途纵横F700皮卡预售",
-      "summary": "奇瑞Exeed推出2027款Exlantix ES搭载Falcon 700智能驾驶系统；Jetour Zongheng F700皮卡开启预售，续航1,300 km。两款车型覆盖轿车与皮卡市场。",
-      "category": "trend",
-      "overall_heat_score": 70,
-      "coverage": {
-        "source_count": 2,
+        "source_count": 1,
         "companies": [
-          "Chery"
+          "Xiaomi"
         ],
         "platforms": [
           "carnewschina"
         ]
       },
-      "should_chase": "no",
+      "should_chase": "yes",
       "chase_rationale": [
-        "同平台2条S级但属于同一来源",
-        "产品线更新常规节奏"
+        "S-level signal from primary China EV source",
+        "Xiaomi entering EREV segment — major product strategy expansion",
+        "High consumer interest ahead of July 30 launch event"
       ],
       "samples": [
         {
           "platform": "carnewschina",
-          "title": "Chery’s Exeed launches 2027 model year Exlantix ES with Falcon 700 intelligent driving system",
-          "url": "https://carnewschina.com/2026/07/20/cherys-exeed-launches-2027-model-year-exlantix-es-with-falcon-700-intelligent-driving-system/",
-          "published_at": "2026-07-20T13:33:28Z",
-          "company": "Chery",
+          "title": "Xiaomi unveils Skynomad EREV specs: 5.7L economy on 92 gas ahead of July 30 debut",
+          "url": "https://carnewschina.com/2026/07/28/xiaomi-unveils-skynomad-kunlun-erev-specs-92-octane-gas-and-5-7l-fuel-economy-ahead-of-july-30-debut/",
+          "published_at": "2026-07-28T06:26:38Z",
+          "company": "Xiaomi",
           "signal_level": "S"
-        },
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H08",
+      "title": "FAW Hongqi Ultra-Fast Battery: 10%-70% in 3 Minutes 41 Seconds",
+      "summary": "FAW Hongqi announced its ultra-fast charging battery can charge from 10% to 70% in just 3 minutes 41 seconds, and from 10% to 97% in 8 minutes 3 seconds. This represents a breakthrough in charging speed that could rival traditional refueling times.",
+      "category": "single",
+      "overall_heat_score": 82,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "FAW",
+          "Hongqi"
+        ],
+        "platforms": [
+          "cnevpost"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "S-level signal from top China EV source",
+        "Breakthrough ultra-fast charging speed (sub-4 min 10-70%)",
+        "Potential game-changer for EV charging anxiety"
+      ],
+      "samples": [
         {
-          "platform": "carnewschina",
-          "title": "Chery’s Jetour Zongheng F700 pickup enters pre-sale   with 1,300 km range, starts 53,900 USD in China",
-          "url": "https://carnewschina.com/2026/07/20/cherys-jetour-zongheng-f700-pickup-enters-pre-sale-with-1300-km-range-starts-53900-usd/",
-          "published_at": "2026-07-20T05:13:17Z",
-          "company": "Chery",
+          "platform": "cnevpost",
+          "title": "FAW Hongqi says its ultra-fast battery charges 10%-70% in 3 minutes 41 seconds",
+          "url": "https://cnevpost.com/2026/07/28/faw-hongqi-battery-charges-10-70-3-mins-41-secs/",
+          "published_at": "2026-07-28T14:13:25Z",
+          "company": "FAW Hongqi",
           "signal_level": "S"
         }
       ]
     },
     {
       "hotspot_id": "H09",
-      "title": "小鹏AI基础设施负责人跳槽OpenAI机器人部门",
-      "summary": "小鹏汽车AI基础设施负责人卢思远即将离职加入OpenAI，参与具身AI机器人研发。反映中国EV企业AI人才面临全球科技巨头竞争压力。",
+      "title": "Denza Z9S Pre-Sales Start August 3 with up to 920 km Range",
+      "summary": "The Denza Z9S (BYD-Daimler joint venture) all-electric sedan will begin pre-sales on August 3. The single-motor version offers 920 km CLTC range, while the tri-motor version delivers 780 km. This positions the Z9S as a leading long-range EV sedan.",
       "category": "single",
-      "overall_heat_score": 85,
+      "overall_heat_score": 76,
       "coverage": {
         "source_count": 1,
         "companies": [
-          "XPeng"
+          "Denza",
+          "BYD"
         ],
         "platforms": [
           "cnevpost"
@@ -397,65 +349,32 @@
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "S级独家报道",
-        "AI人才流失反映行业竞争格局",
-        "OpenAI机器人方向新动向"
+        "S-level signal from top China EV source",
+        "920 km CLTC range is industry-leading",
+        "Pre-sales event imminent (Aug 3)"
       ],
       "samples": [
         {
           "platform": "cnevpost",
-          "title": "Xpeng loses AI infrastructure chief to OpenAI's robotics push, report says",
-          "url": "https://cnevpost.com/2026/07/20/xpeng-loses-ai-infra-chief-to-openai/",
-          "published_at": "2026-07-20T14:31:23Z",
-          "company": "XPeng",
+          "title": "Denza Z9S to begin pre-sales on August 3 with up to 920 km range",
+          "url": "https://cnevpost.com/2026/07/28/denza-z9s-pre-sales-aug-3/",
+          "published_at": "2026-07-28T07:59:06Z",
+          "company": "Denza",
           "signal_level": "S"
         }
       ]
     },
     {
       "hotspot_id": "H10",
-      "title": "CALB电池缺陷致广汽Aion S车队大规模故障",
-      "summary": "CALB电池缺陷在行驶15万公里后触发广汽Aion S车型大规模故障，涉及安全性召回风险。",
+      "title": "Huawei-Backed Stelato G9 Off-Road SUV Pre-Orders Open August 5",
+      "summary": "The Stelato G9, a Huawei-backed large off-road SUV measuring 5.2 meters long, will open pre-orders on August 5. This boxy SUV extends the Huawei automotive ecosystem into the luxury off-road segment, building on the success of the Aito brand partnership.",
       "category": "single",
-      "overall_heat_score": 80,
+      "overall_heat_score": 73,
       "coverage": {
         "source_count": 1,
         "companies": [
-          "CALB",
-          "GAC"
-        ],
-        "platforms": [
-          "carnewschina"
-        ]
-      },
-      "should_chase": "yes",
-      "chase_rationale": [
-        "S级独家报道",
-        "电池安全重大问题涉及召回风险",
-        "可能影响CALB供应关系和股价"
-      ],
-      "samples": [
-        {
-          "platform": "carnewschina",
-          "title": "CALB battery issues trigger massice failures in GAC Aion S fleet",
-          "url": "https://carnewschina.com/2026/07/21/calb-battery-issues-trigger-massice-failures-in-gac-aion-s-fleet/",
-          "published_at": "2026-07-21T01:30:34Z",
-          "company": "GAC",
-          "signal_level": "S"
-        }
-      ]
-    },
-    {
-      "hotspot_id": "H11",
-      "title": "本田与广汽合资企业延长至2038年",
-      "summary": "本田与广汽签署协议将合资公司GAC Honda合作期限延长至2038年，销量下滑背景下巩固中国合资关系。",
-      "category": "single",
-      "overall_heat_score": 72,
-      "coverage": {
-        "source_count": 1,
-        "companies": [
-          "GAC",
-          "Honda"
+          "Huawei",
+          "Stelato"
         ],
         "platforms": [
           "cnevpost"
@@ -463,48 +382,81 @@
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "S级独家报道",
-        "合资续约反映外资车企中国战略调整"
+        "S-level signal from top China EV source",
+        "Huawei automotive ecosystem expanding into off-road SUV segment",
+        "Pre-order event imminent (Aug 5)"
       ],
       "samples": [
         {
           "platform": "cnevpost",
-          "title": "Honda, GAC extend GAC Honda joint venture to 2038 as sales slump",
-          "url": "https://cnevpost.com/2026/07/20/honda-gac-extend-jv-to-2038/",
-          "published_at": "2026-07-20T07:30:55Z",
-          "company": "Honda",
+          "title": "Huawei-backed Stelato G9 off-road SUV to open pre-orders on August 5",
+          "url": "https://cnevpost.com/2026/07/28/stelato-g9-open-pre-orders-aug-5/",
+          "published_at": "2026-07-28T06:13:08Z",
+          "company": "Stelato",
+          "signal_level": "S"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H11",
+      "title": "GAC Aion Launches New Ray Series with Ray 7 Electric Sedan",
+      "summary": "GAC Aion launched its new Ray series with the first model, Ray 7, a mid-to-large size electric sedan targeting young buyers. This expands GAC Aion's product lineup and signals continued new model cadence from the Chinese EV maker.",
+      "category": "single",
+      "overall_heat_score": 68,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "GAC Aion"
+        ],
+        "platforms": [
+          "cnevpost"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "S-level signal from dedicated China EV source",
+        "New product series launch from major Chinese EV maker",
+        "Targets young buyer demographic — strategic positioning"
+      ],
+      "samples": [
+        {
+          "platform": "cnevpost",
+          "title": "GAC Aion launches new Ray series, names first model Ray 7",
+          "url": "https://cnevpost.com/2026/07/28/gac-aion-launches-new-ray-series/",
+          "published_at": "2026-07-28T13:21:34Z",
+          "company": "GAC Aion",
           "signal_level": "S"
         }
       ]
     },
     {
       "hotspot_id": "H12",
-      "title": "丰田下一代Corolla EV转型亮相",
-      "summary": "丰田以危机感推动下一代Corolla纯电版研发，Corolla作为全球最畅销车型之一的电动化转型具有标志性意义。",
+      "title": "CATL Net Profit Jumps 42% — Battery Giant's Financial Strength",
+      "summary": "CATL, the world's largest battery maker, reported a 42% net profit jump. The company supplies not only the massive Chinese EV industry but has also become a key supplier for Western automakers, surpassing former leaders like LG Energy Solution.",
       "category": "single",
-      "overall_heat_score": 76,
+      "overall_heat_score": 70,
       "coverage": {
         "source_count": 1,
         "companies": [
-          "Toyota"
+          "CATL"
         ],
         "platforms": [
-          "electrek"
+          "cleantechnica"
         ]
       },
       "should_chase": "yes",
       "chase_rationale": [
-        "Corolla全球最畅销车系电动化意义重大",
-        "丰田电动化战略加速信号",
-        "A级报道可信度较高"
+        "Major financial result from world's largest battery maker",
+        "42% profit growth signals strong EV battery demand",
+        "Key supply chain indicator for the entire EV industry"
       ],
       "samples": [
         {
-          "platform": "electrek",
-          "title": "Toyota’s next-gen Corolla EV takes center stage as a ‘sense of crisis’ reshapes the company",
-          "url": "https://electrek.co/2026/07/20/toyota-next-gen-corolla-ev-crisis-grows/",
-          "published_at": "2026-07-20T15:01:15Z",
-          "company": "Toyota",
+          "platform": "cleantechnica",
+          "title": "CATL Net Profit Jumps 42%",
+          "url": "https://cleantechnica.com/2026/07/28/catl-net-profit-jumps-42/",
+          "published_at": "2026-07-28T13:50:55Z",
+          "company": "CATL",
           "signal_level": "A"
         }
       ]
