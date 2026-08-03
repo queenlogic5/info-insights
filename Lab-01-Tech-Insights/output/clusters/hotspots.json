@@ -1,28 +1,94 @@
 {
-  "mode": "sample",
+  "mode": "llm",
   "top_k": 12,
   "hotspots": [
     {
       "hotspot_id": "H01",
-      "title": "Coding AI shifts from autocomplete to repository-level agents",
-      "summary": "Official changelogs and developer-tool updates point toward agents that can inspect repositories, edit files, run checks, and prepare reviewable changes.",
-      "category": "trend",
-      "overall_heat_score": 94,
+      "title": "Vibe-coding platforms move into enterprise private clouds",
+      "summary": "AWS now allows vibe-coding tool Superblocks to be embedded into the private clouds of AWS customers, signaling that enterprise buyers want low-code/vibe-coding development inside their own infrastructure, decoupled from any single model provider.",
+      "category": "single",
+      "overall_heat_score": 78,
       "coverage": {
-        "source_count": 3,
-        "companies": ["OpenAI", "GitHub", "Anthropic"],
-        "platforms": ["openai-news", "github-changelog", "claude-code-changelog"]
+        "source_count": 1,
+        "companies": [
+          "AWS",
+          "Superblocks"
+        ],
+        "platforms": [
+          "techcrunch-ai"
+        ]
       },
       "should_chase": "yes",
-      "chase_rationale": ["High impact on developer workflows", "Strong vendor competition signal"],
+      "chase_rationale": [
+        "Enterprise adoption of vibe-coding tools inside private cloud environments",
+        "Model decoupling trend has procurement and governance implications"
+      ],
       "samples": [
         {
-          "platform": "openai-news",
-          "title": "Repository agent safety and code review workflow",
-          "url": "https://openai.com/news/rss.xml",
-          "published_at": "2026-08-03T00:00:00Z",
-          "company": "OpenAI",
-          "signal_level": "S"
+          "platform": "techcrunch-ai",
+          "title": "AWS is helping vibe-coding startup Superblocks, and the implications are big",
+          "url": "https://techcrunch.com/2026/08/03/aws-is-helping-vibe-coding-startup-superblocks-and-the-implications-are-big/",
+          "published_at": "2026-08-03T20:00:00Z",
+          "company": "Superblocks",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H02",
+      "title": "AI agents as scheduled maintenance workers: nightly rebase-and-verify workflows",
+      "summary": "David Crawshaw's widely-quoted prompt describes a nightly cron job where an AI agent fetches upstream changes, rebases local modifications, verifies the software still works, and replaces the current version - a template for reliable autonomous dependency and update maintenance.",
+      "category": "single",
+      "overall_heat_score": 82,
+      "coverage": {
+        "source_count": 1,
+        "companies": [],
+        "platforms": [
+          "simon-willison"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "Shows a concrete, verifiable pattern for agentic software maintenance",
+        "High relevance for platform teams designing autonomous update workflows"
+      ],
+      "samples": [
+        {
+          "platform": "simon-willison",
+          "title": "Quoting David Crawshaw's prompt",
+          "url": "https://simonwillison.net/2026/Aug/3/david-crawshaw/#atom-everything",
+          "published_at": "2026-08-03T16:15:27Z",
+          "company": null,
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H03",
+      "title": "Open-source devtools argument intensifies as AI coding tooling matures",
+      "summary": "Simon Willison highlights the 'Devtools must be open source' argument (exe.dev), emphasizing that when AI agents take over code examination and modification, developers lose the freedom to inspect and modify the tools themselves unless devtools remain open source.",
+      "category": "single",
+      "overall_heat_score": 76,
+      "coverage": {
+        "source_count": 1,
+        "companies": [],
+        "platforms": [
+          "simon-willison"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "Open-source governance angle directly affects developer tool procurement",
+        "Raises trust and auditability concerns for AI-powered devtools"
+      ],
+      "samples": [
+        {
+          "platform": "simon-willison",
+          "title": "Devtools must be open source (exe.dev)",
+          "url": "https://simonwillison.net/2026/Aug/3/devtools-must-be-open-source-exedev/#atom-everything",
+          "published_at": "2026-08-03T15:30:38Z",
+          "company": null,
+          "signal_level": "B"
         }
       ]
     }

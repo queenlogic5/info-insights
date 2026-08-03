@@ -1,15 +1,86 @@
 {
-  "mode": "sample",
+  "mode": "llm",
   "insights": [
     {
       "hotspot_id": "H01",
-      "title": "Coding AI shifts from autocomplete to repository-level agents",
-      "what_changed": "Coding AI products are increasingly framed as agents that can work across repositories rather than simple inline completion tools.",
-      "why_it_matters": "This affects how engineering teams evaluate productivity, governance, security, and review workflows.",
-      "who_is_impacted": ["software engineering teams", "developer experience leaders", "security teams", "AI tool buyers"],
-      "next_actions": ["Review official changelogs", "Test agents on representative repositories", "Define verification and security-review gates"],
-      "risk_notes": ["Generated changes still require human review and automated tests"],
-      "references": []
+      "title": "Vibe-coding platforms move into enterprise private clouds",
+      "what_changed": "AWS now permits vibe-coding tool Superblocks to be embedded into the private clouds of AWS customers, letting enterprise teams build and deploy AI-assisted applications inside their own VPC/private infrastructure.",
+      "why_it_matters": "This signals a shift from app development being tied to a single model provider toward model-decoupled, infrastructure-native development. Enterprise teams can get vibe-coding productivity without sending code or prompts to external SaaS endpoints, which changes both the security posture and the procurement conversation.",
+      "who_is_impacted": [
+        "Enterprise engineering leaders evaluating low-code/vibe-coding tooling",
+        "Platform and cloud-infrastructure teams managing private-cloud boundaries",
+        "Security and governance teams reviewing data egress and model access",
+        "Competing AI devtool vendors (Cursor, Copilot, Retool-style builders)"
+      ],
+      "next_actions": [
+        "Evaluate Superblocks-style private-cloud embeddings against internal data residency and compliance requirements",
+        "Add model-decoupling and private-deployment criteria to coding-AI vendor RFPs",
+        "Run a pilot that deploys a vibe-coding tool inside a sandboxed VPC and measure developer velocity and governance overhead",
+        "Track AWS/partner announcements for expanded AI application-builder integrations"
+      ],
+      "risk_notes": [
+        "Vibe-coding quality and maintainability risks remain even inside the private cloud",
+        "Tight coupling to AWS infrastructure could create lock-in if the tool only runs on AWS",
+        "Private-cloud embedding does not by itself solve audit, observability, or security-review gaps",
+        "Superblocks is a smaller vendor; enterprise dependency risk needs due diligence"
+      ],
+      "references": [
+        "https://techcrunch.com/2026/08/03/aws-is-helping-vibe-coding-startup-superblocks-and-the-implications-are-big/"
+      ]
+    },
+    {
+      "hotspot_id": "H02",
+      "title": "AI agents as scheduled maintenance workers: nightly rebase-and-verify workflows",
+      "what_changed": "David Crawshaw's prompt, widely quoted, describes a nightly cron job where an AI agent fetches upstream changes, rebases all local modifications on top, verifies the software still works, and replaces the current version.",
+      "why_it_matters": "It demonstrates a concrete, verifiable template for autonomous software maintenance: scheduled agents that run a fetch-rebase-verify-replace loop. This moves AI agents from interactive coding assistants to unattended operational workers, with big implications for dependency hygiene, patching, and platform reliability.",
+      "who_is_impacted": [
+        "Platform engineering teams responsible for dependency and update management",
+        "Open-source maintainers and fork owners who must track upstream",
+        "DevOps/Release teams looking to automate toil around rebasing and upgrades",
+        "AI agent vendors building scheduling, sandboxing, and verification tooling"
+      ],
+      "next_actions": [
+        "Prototype a scheduled agent workflow for a low-risk repository: fetch upstream, rebase, run tests, report diff",
+        "Define verification gates (test suite, build, static analysis) before any automatic replace",
+        "Add audit logging and human-approval checkpoints for high-impact update flows",
+        "Investigate cron/CI-native agent scheduling instead of ad-hoc automation"
+      ],
+      "risk_notes": [
+        "Autonomous rebasing can silently conflict or break local patches if verification is weak",
+        "Nightly agents need proper sandboxing and secret handling for CI credentials",
+        "Unattended 'replace the current version' actions are risky without rollback and peer review",
+        "Prompt quality is the single point of failure - brittle prompts degrade silently"
+      ],
+      "references": [
+        "https://simonwillison.net/2026/Aug/3/david-crawshaw/#atom-everything"
+      ]
+    },
+    {
+      "hotspot_id": "H03",
+      "title": "Open-source devtools argument intensifies as AI coding tooling matures",
+      "what_changed": "Simon Willison highlighted the 'Devtools must be open source' argument from exe.dev: when AI agents increasingly inspect and modify code on developers' behalf, developers lose the freedom to examine and modify the tools themselves unless devtools stay open source.",
+      "why_it_matters": "As AI agents become the primary interface to code, the devtools layer is becoming infrastructure. If that layer is closed-source, engineering teams cannot audit behavior, fix tooling bugs, or extend workflows - a governance and trust concern that will shape procurement and open-source adoption in the coding-AI market.",
+      "who_is_impacted": [
+        "Developer experience leaders choosing between closed and open AI devtools",
+        "Platform/security teams that need to audit tooling behavior",
+        "Open-source communities and maintainers of AI coding tools",
+        "Tool vendors deciding open-core vs proprietary licensing strategies"
+      ],
+      "next_actions": [
+        "Add tool-source transparency and extensibility to devtool evaluation checklists",
+        "Prefer open-source or open-core agents for critical, security-sensitive workflows",
+        "Engage with community-maintained agent tools and contribute fixes where gaps exist",
+        "Document tooling auditability in security review processes for AI-assisted development"
+      ],
+      "risk_notes": [
+        "Closed-source agents may exhibit non-auditable behavior with broad file-system access",
+        "Open-source tooling can lag on features and carry maintenance burden",
+        "The debate may accelerate licensing changes or vendor lock-in strategies",
+        "Agent-written code is only as trustworthy as the tooling that produced it"
+      ],
+      "references": [
+        "https://simonwillison.net/2026/Aug/3/devtools-must-be-open-source-exedev/#atom-everything"
+      ]
     }
   ]
 }
