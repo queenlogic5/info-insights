@@ -1,8 +1,8 @@
 {
   "window": {
     "time_window_hours": 24,
-    "cutoff": "2026-08-02T00:00:00Z",
-    "generated_at": "2026-08-03T00:00:00Z"
+    "cutoff": "2026-08-02T23:27:46.870076Z",
+    "generated_at": "2026-08-03T23:27:46.870076Z"
   },
   "sources": [
     {
@@ -10,52 +10,248 @@
       "platform_key": "openai-news",
       "source_type": "rss",
       "url": "https://openai.com/news/rss.xml",
-      "parsed": 0,
+      "file": "Lab-01-Tech-Insights/output/signals/openai-news.xml",
+      "parsed": 25,
       "kept": 0,
       "parse_error": null,
       "company": "OpenAI",
       "signal_level": "S",
-      "tracks": ["agentic_workflows", "coding_tools"]
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools"
+      ]
     },
     {
       "platform": "github-changelog",
       "platform_key": "github-changelog",
       "source_type": "rss",
       "url": "https://github.blog/changelog/feed/",
-      "parsed": 0,
+      "file": "Lab-01-Tech-Insights/output/signals/github-changelog.xml",
+      "parsed": 10,
       "kept": 0,
       "parse_error": null,
       "company": "GitHub",
       "signal_level": "S",
-      "tracks": ["agentic_workflows", "coding_tools"]
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools"
+      ]
     },
     {
       "platform": "claude-code-changelog",
       "platform_key": "claude-code-changelog",
       "source_type": "rss",
       "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/feed.xml",
-      "parsed": 0,
+      "file": "Lab-01-Tech-Insights/output/signals/claude-code-changelog.xml",
+      "parsed": 20,
       "kept": 0,
       "parse_error": null,
       "company": "Anthropic",
       "signal_level": "S",
-      "tracks": ["agentic_workflows", "coding_tools", "models_eval"]
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools",
+        "models_eval"
+      ]
+    },
+    {
+      "platform": "anthropic-news",
+      "platform_key": "anthropic-news",
+      "source_type": "html",
+      "url": "https://www.anthropic.com/news",
+      "file": "Lab-01-Tech-Insights/output/signals/anthropic-news.html",
+      "parsed": 14,
+      "kept": 0,
+      "parse_error": null,
+      "company": "Anthropic",
+      "signal_level": "A",
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools"
+      ]
+    },
+    {
+      "platform": "cursor-changelog",
+      "platform_key": "cursor-changelog",
+      "source_type": "html",
+      "url": "https://www.cursor.com/en/changelog",
+      "file": "Lab-01-Tech-Insights/output/signals/cursor-changelog.html",
+      "parsed": 0,
+      "kept": 0,
+      "parse_error": null,
+      "company": "Cursor",
+      "signal_level": "A",
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools",
+        "models_eval"
+      ]
+    },
+    {
+      "platform": "huggingface-blog",
+      "platform_key": "huggingface-blog",
+      "source_type": "rss",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "file": "Lab-01-Tech-Insights/output/signals/huggingface-blog.xml",
+      "parsed": 25,
+      "kept": 0,
+      "parse_error": null,
+      "company": "Hugging Face",
+      "signal_level": "A",
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools",
+        "models_eval"
+      ]
+    },
+    {
+      "platform": "infoq-ai-coding",
+      "platform_key": "infoq-ai-coding",
+      "source_type": "html",
+      "url": "https://www.infoq.com/ai-coding/",
+      "file": "Lab-01-Tech-Insights/output/signals/infoq-ai-coding.html",
+      "parsed": 2,
+      "kept": 0,
+      "parse_error": null,
+      "company": null,
+      "signal_level": "A",
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools"
+      ]
+    },
+    {
+      "platform": "techcrunch-ai",
+      "platform_key": "techcrunch-ai",
+      "source_type": "rss",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "file": "Lab-01-Tech-Insights/output/signals/techcrunch-ai.xml",
+      "parsed": 20,
+      "kept": 1,
+      "parse_error": null,
+      "company": null,
+      "signal_level": "B",
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools"
+      ]
+    },
+    {
+      "platform": "theverge-ai",
+      "platform_key": "theverge-ai",
+      "source_type": "rss",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "file": "Lab-01-Tech-Insights/output/signals/theverge-ai.xml",
+      "parsed": 10,
+      "kept": 0,
+      "parse_error": null,
+      "company": null,
+      "signal_level": "B",
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools"
+      ]
+    },
+    {
+      "platform": "simon-willison",
+      "platform_key": "simon-willison",
+      "source_type": "rss",
+      "url": "https://simonwillison.net/atom/everything/",
+      "file": "Lab-01-Tech-Insights/output/signals/simon-willison.xml",
+      "parsed": 25,
+      "kept": 2,
+      "parse_error": null,
+      "company": null,
+      "signal_level": "B",
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools",
+        "models_eval"
+      ]
     }
   ],
   "items": [
     {
-      "platform": "openai-news",
-      "platform_key": "openai-news",
+      "platform": "techcrunch-ai",
+      "platform_key": "techcrunch-ai",
       "source_type": "rss",
-      "title": "Sample coding AI signal: repository agent safety and code review workflow",
-      "title_norm": "sample coding ai signal repository agent safety and code review workflow",
-      "url": "https://openai.com/news/rss.xml",
-      "published_at": "2026-08-03T00:00:00Z",
-      "summary": "Placeholder sample showing the expected coding AI signal shape after the next workflow run refreshes live data.",
-      "company": "OpenAI",
-      "signal_level": "S",
-      "include_keywords": ["Codex", "coding", "developer", "agent", "code review"],
-      "tracks": ["agentic_workflows", "coding_tools"],
+      "title": "AWS is helping vibe-coding startup Superblocks, and the implications are big",
+      "title_norm": "aws is helping vibe coding startup superblocks and the implications are big",
+      "url": "https://techcrunch.com/2026/08/03/aws-is-helping-vibe-coding-startup-superblocks-and-the-implications-are-big/",
+      "published_at": "2026-08-03T20:00:00Z",
+      "summary": "AWS now allows vibe-coding tool Superblocks to be embedded into the private clouds of AWS customers. It's another step toward decoupling apps from models.",
+      "company": null,
+      "signal_level": "B",
+      "include_keywords": [
+        "coding",
+        "developer",
+        "software",
+        "agent",
+        "Copilot",
+        "Codex",
+        "Claude Code",
+        "Cursor"
+      ],
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools"
+      ],
+      "language": "en"
+    },
+    {
+      "platform": "simon-willison",
+      "platform_key": "simon-willison",
+      "source_type": "rss",
+      "title": "Quoting David Crawshaw's prompt",
+      "title_norm": "quoting david crawshaw s prompt",
+      "url": "https://simonwillison.net/2026/Aug/3/david-crawshaw/#atom-everything",
+      "published_at": "2026-08-03T16:15:27Z",
+      "summary": "<blockquote cite=\"https://blog.exe.dev/devtools-must-be-open-source\"><p><code>Set up a nightly cron job that executes the prompt: fetch upstream changes to the &lt;software&gt; and rebase all local changes on top of upstream. Check that the software works as intended and replace the current version.</code></p></blockq…",
+      "company": null,
+      "signal_level": "B",
+      "include_keywords": [
+        "coding",
+        "code",
+        "developer",
+        "agent",
+        "LLM",
+        "prompt",
+        "tool use",
+        "evaluation"
+      ],
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools",
+        "models_eval"
+      ],
+      "language": "en"
+    },
+    {
+      "platform": "simon-willison",
+      "platform_key": "simon-willison",
+      "source_type": "rss",
+      "title": "Devtools must be open source (exe.dev)",
+      "title_norm": "devtools must be open source exe dev",
+      "url": "https://simonwillison.net/2026/Aug/3/devtools-must-be-open-source-exedev/#atom-everything",
+      "published_at": "2026-08-03T15:30:38Z",
+      "summary": "<p><a href=\"https://news.ycombinator.com/item?id=49156111#49156719\">My comment</a> on <a href=\"https://news.ycombinator.com/item?id=49156111\">Devtools must be open source (exe.dev)</a> &mdash; Hacker News.</p><p>One of the arguments for open source software for end-users has always been the freedom to examine and modi…",
+      "company": null,
+      "signal_level": "B",
+      "include_keywords": [
+        "coding",
+        "code",
+        "developer",
+        "agent",
+        "LLM",
+        "prompt",
+        "tool use",
+        "evaluation"
+      ],
+      "tracks": [
+        "agentic_workflows",
+        "coding_tools",
+        "models_eval"
+      ],
       "language": "en"
     }
   ]
