@@ -1,36 +1,31 @@
 # Frontend (GitHub Pages)
 
-这是一个极简静态页面：在浏览器端把 `report.md` 渲染成可阅读的 HTML。
+This is a minimal static report viewer. It renders `report.md` as readable HTML in the browser.
 
-## 本地预览（零安装）
+## Local Preview
 
-仓库根目录执行：
+Run this from the repository root:
 
-- `python3 -m http.server 8000 --directory Lab-01-Tech-Insights/frontend`
-- 浏览器打开：`http://localhost:8000`
+```bash
+python3 -m http.server 8000 --directory Lab-01-Tech-Insights/frontend
+```
 
-> 说明：直接双击打开 `index.html` 在部分浏览器会触发跨域限制，导致 `fetch(report.md)` 失败；用本地静态服务器即可。
+Then open `http://localhost:8000`.
 
-## 使用方式
+Opening `index.html` directly may fail in some browsers because `fetch(report.md)` can be blocked by local-file cross-origin rules.
 
-- 默认渲染：`report.md`（与 `index.html` 同目录）
+## Usage
 
-## 部署到 GitHub Pages
+- Default rendered file: `report.md` in the same directory as `index.html`
 
-本仓库使用 GitHub Pages 进行部署，无需额外的云服务。
+## Deploy to GitHub Pages
 
-### 开启方式
+This repository deploys with GitHub Pages and does not need a separate cloud service.
 
-1. 打开仓库 → **Settings** → 左侧 **Pages**。
-2. Source 选择 **GitHub Actions**。
-3. 手动触发 `Deploy GitHub Pages` 工作流（`.github/workflows/deploy-pages.yml`）。
+1. Open the repository **Settings -> Pages**.
+2. Set **Source** to **GitHub Actions**.
+3. Run the `Deploy GitHub Pages` workflow.
 
-### 自动部署
+`deploy-pages.yml` also deploys automatically when files under `Lab-01-Tech-Insights/frontend/` change on `main`.
 
-当 `Lab-01-Tech-Insights/frontend/` 下的文件发生变更并推送到 `main` 分支时，`deploy-pages.yml` 会自动触发部署。
-
-Tech Insight Workflow 每次运行后会将最新的 `report.md` 写入 `Lab-01-Tech-Insights/frontend/report.md`，从而自动触发 Pages 重新部署。
-
-### 访问地址
-
-部署成功后，访问：`https://<你的用户名>.github.io/<仓库名>/`
+The Coding AI Insight workflow writes the latest Markdown report to `Lab-01-Tech-Insights/frontend/report.md`, which triggers a Pages refresh after the report PR is merged.

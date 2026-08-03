@@ -1,82 +1,98 @@
 [
   {
     "id": 1,
-    "name": "CnEVPost",
-    "platform": "cnevpost",
+    "name": "OpenAI News",
+    "platform": "openai-news",
     "source": "rss",
-    "url": "https://cnevpost.com/feed/",
-    "signal_level": "S"
+    "url": "https://openai.com/news/rss.xml",
+    "company": "OpenAI",
+    "signal_level": "S",
+    "include_keywords": ["Codex", "coding", "developer", "agent", "code review", "software", "engineering", "sandbox"]
   },
   {
     "id": 2,
-    "name": "CarNewsChina",
-    "platform": "carnewschina",
+    "name": "GitHub Changelog",
+    "platform": "github-changelog",
     "source": "rss",
-    "url": "https://carnewschina.com/feed/",
-    "signal_level": "S"
+    "url": "https://github.blog/changelog/feed/",
+    "company": "GitHub",
+    "signal_level": "S",
+    "include_keywords": ["Copilot", "coding agent", "agent", "MCP", "code review", "pull request", "VS Code", "developer"]
   },
   {
     "id": 3,
-    "name": "Pandaily",
-    "platform": "pandaily",
+    "name": "Claude Code Changelog",
+    "platform": "claude-code-changelog",
     "source": "rss",
-    "url": "https://pandaily.com/feed/",
-    "signal_level": "A"
+    "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/feed.xml",
+    "company": "Anthropic",
+    "signal_level": "S",
+    "include_keywords": ["Claude Code", "agent", "MCP", "sandbox", "model", "SDK", "hooks", "coding"]
   },
   {
     "id": 4,
-    "name": "Electrek",
-    "platform": "electrek",
-    "source": "rss",
-    "url": "https://electrek.co/feed/",
-    "signal_level": "A"
+    "name": "Anthropic News",
+    "platform": "anthropic-news",
+    "source": "html",
+    "url": "https://www.anthropic.com/news",
+    "company": "Anthropic",
+    "signal_level": "A",
+    "include_keywords": ["Claude Code", "coding", "developer", "agent", "software", "tool use"]
   },
   {
     "id": 5,
-    "name": "InsideEVs",
-    "platform": "insideevs",
-    "source": "rss",
-    "url": "https://insideevs.com/rss/articles/all/",
-    "signal_level": "A"
+    "name": "Cursor Changelog",
+    "platform": "cursor-changelog",
+    "source": "html",
+    "url": "https://www.cursor.com/en/changelog",
+    "company": "Cursor",
+    "signal_level": "A",
+    "include_keywords": ["agent", "BugBot", "code review", "MCP", "model", "workspace", "editor", "coding"]
   },
   {
     "id": 6,
-    "name": "CleanTechnica",
-    "platform": "cleantechnica",
+    "name": "Hugging Face Blog",
+    "platform": "huggingface-blog",
     "source": "rss",
-    "url": "https://cleantechnica.com/feed/",
-    "signal_level": "A"
+    "url": "https://huggingface.co/blog/feed.xml",
+    "company": "Hugging Face",
+    "signal_level": "A",
+    "include_keywords": ["coding", "code", "agent", "developer", "LLM", "model", "tools", "evaluation"]
   },
   {
     "id": 7,
-    "name": "The Driven",
-    "platform": "thedriven",
-    "source": "rss",
-    "url": "https://thedriven.io/feed/",
-    "signal_level": "B"
+    "name": "InfoQ AI Coding",
+    "platform": "infoq-ai-coding",
+    "source": "html",
+    "url": "https://www.infoq.com/ai-coding/",
+    "signal_level": "A",
+    "include_keywords": ["AI Coding", "coding", "agent", "software development", "code review", "developer"]
   },
   {
     "id": 8,
-    "name": "The Verge Transportation",
-    "platform": "theverge-transport",
+    "name": "TechCrunch AI",
+    "platform": "techcrunch-ai",
     "source": "rss",
-    "url": "https://www.theverge.com/rss/transportation/index.xml",
-    "signal_level": "B"
+    "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+    "signal_level": "B",
+    "include_keywords": ["coding", "developer", "software", "agent", "Copilot", "Codex", "Claude Code", "Cursor"]
   },
   {
     "id": 9,
-    "name": "TechCrunch Transportation",
-    "platform": "techcrunch-transport",
+    "name": "The Verge AI",
+    "platform": "theverge-ai",
     "source": "rss",
-    "url": "https://techcrunch.com/category/transportation/feed/",
-    "signal_level": "B"
+    "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+    "signal_level": "B",
+    "include_keywords": ["coding", "developer", "software", "agent", "Copilot", "Codex", "Claude Code", "Cursor"]
   },
   {
     "id": 10,
-    "name": "Charged EVs",
-    "platform": "chargedevs",
+    "name": "Simon Willison",
+    "platform": "simon-willison",
     "source": "rss",
-    "url": "https://chargedevs.com/feed/",
-    "signal_level": "B"
+    "url": "https://simonwillison.net/atom/everything/",
+    "signal_level": "B",
+    "include_keywords": ["coding", "code", "developer", "agent", "LLM", "prompt", "tool use", "evaluation"]
   }
 ]

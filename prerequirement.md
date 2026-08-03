@@ -1,32 +1,32 @@
 # Prerequisites
 
-完成本仓库所有 Lab 所需的软件与账号。
+Software and accounts required to run the coding AI insights lab.
 
-## 账号
+## Accounts
 
-| 账号 | 用途 | 涉及 Lab |
-|------|------|----------|
-| GitHub | 托管 gh-aw 工作流与 GitHub Actions | Lab-01 |
-| DeepSeek（含 API 余额） | DeepSeek API Key 与模型调用 | Lab-01 |
+| Account | Purpose | Labs |
+|---------|---------|------|
+| GitHub | Host the gh-aw workflow and GitHub Actions runs | Lab-01 |
+| DeepSeek with API balance | Provide the API key and model calls for the workflow | Lab-01 |
 
-## 软件
+## Software
 
-| 软件 | 最低版本 | 涉及 Lab | 安装 |
-|------|---------|----------|------|
-| Git | 2.x | 全部 | https://git-scm.com |
-| GitHub CLI (`gh`) | 2.x | 全部 | https://cli.github.com |
-| gh-aw 扩展 | latest | Lab-01 | `gh extension install github/gh-aw` |
-| Python | 3.11+ | 全部 | https://www.python.org |
-| Node.js | 24+ | 全部 | https://nodejs.org |
-| VS Code | latest | 全部（推荐） | https://code.visualstudio.com |
+| Software | Minimum Version | Labs | Install |
+|----------|-----------------|------|---------|
+| Git | 2.x | All | https://git-scm.com |
+| GitHub CLI (`gh`) | 2.x | All | https://cli.github.com |
+| gh-aw extension | latest | Lab-01 | `gh extension install github/gh-aw` |
+| Python | 3.11+ | All | https://www.python.org |
+| Node.js | 24+ | All | https://nodejs.org |
+| VS Code | latest | All, recommended | https://code.visualstudio.com |
 
-## 快速验证
+## Quick Verification
 
 ```bash
 git --version          # >= 2.x
 gh --version           # >= 2.x
-gh aw --version        # 已安装即可
+gh aw --version        # installed
 python3 --version      # >= 3.11
 node --version         # >= 24
-code --version         # 已安装即可
+code --version         # installed, optional
 ```

@@ -1,59 +1,55 @@
-# Lab-01：EV 市场洞察与竞争雷达 — GitHub Agentic Workflows 动手实验
+# Lab-01: Coding AI Market Insights and Developer Tooling Radar
 
-本实验带你从零跑通一个基于 GitHub Agentic Workflows 的 EV（电动车）行业市场洞察与竞争雷达流水线。
+This lab walks through a GitHub Agentic Workflows pipeline that tracks coding AI updates and turns them into a market insights report.
 
-实验时长：60 分钟
+Duration: 60 minutes
 
-你将收获：Fork 仓库 → 配置 DeepSeek API Key 与 gh-aw → 手动触发工作流 → 查看 AI 生成的 EV 市场洞察报告 → 部署到 GitHub Pages。
+You will fork the repository, configure a DeepSeek API key and gh-aw, run the workflow manually, inspect an AI-generated coding AI report, and deploy it with GitHub Pages.
 
-### 架构图
+## Architecture
 
 ```text
-RSS 源 (10 个 EV 精选)
-    ↓ 阶段1: 信号抓取
-MCP Scripts (Python 工具)
-    ↓ raw_signals.json
-    ↓ 阶段2: 热点聚类
+Coding AI sources
+    -> Phase 1: signal fetch
+MCP Scripts (Python tools)
+    -> raw_signals.json
+    -> Phase 2: hotspot clustering
 LLM (DeepSeek) + cluster_or_fallback
-    ↓ hotspots.json
-    ↓ 阶段3: 洞察生成
+    -> hotspots.json
+    -> Phase 3: insight generation
 LLM (DeepSeek) + insight_or_fallback
-    ↓ insights.json
-    ↓ 阶段4: 报告生成
+    -> insights.json
+    -> Phase 4: report rendering
 LLM (DeepSeek) + render_report_or_fallback
-    ↓ report.md
-    ↓ safe-outputs 自动创建 PR
-合并 PR → deploy-pages 自动触发
-    ↓
-GitHub Pages (在线查看)
+    -> report.md
+    -> safe-outputs creates PR
+Merge PR -> deploy-pages runs
+    ->
+GitHub Pages
 ```
 
----
+## Lab 0: Environment Setup and Fork (10 minutes)
 
-## Lab 0: 环境准备与 Fork（10 分钟）
+Prerequisites:
 
-### 前置条件
-- GitHub 账号
-- DeepSeek API Key（账号需有可用余额）
-- 一台能上网的电脑（macOS / Linux / Windows WSL）
-- Python 3.10+ 已安装
-- VS Code 已安装（推荐）
+- GitHub account
+- DeepSeek API key with available balance
+- Internet-connected computer with macOS, Linux, or Windows WSL
+- Python 3.10+
+- VS Code, recommended
 
-### 步骤
+Steps:
 
-1. Fork 本仓库
-   - 打开 `https://github.com/MetaHuman/info-insights.git`
-   - 点击右上角 **Fork** 按钮
-   - 保留默认设置，点击 **Create fork**
-   - 等待 Fork 完成
+1. Fork `https://github.com/MetaHuman/info-insights.git`.
+2. Clone your fork:
 
-2. Clone 到本地
 ```bash
-git clone https://github.com/<你的用户名>/info-insights.git
+git clone https://github.com/<your-username>/info-insights.git
 cd info-insights
 ```
 
-3. 安装 GitHub CLI （如已安装可跳过）
+3. Install GitHub CLI if needed:
+
 ```bash
 # macOS
 brew install gh
@@ -65,226 +61,222 @@ sudo apt install gh
 winget install GitHub.cli
 ```
 
-4. 登录 GitHub CLI（如已登录可跳过）
+4. Log in:
+
 ```bash
 gh auth login
-# 选择 GitHub.com → HTTPS → 按提示完成浏览器认证
 ```
 
-5. 安装 gh-aw 扩展
+5. Install gh-aw:
+
 ```bash
 gh extension install github/gh-aw
 ```
 
-6. 验证安装
+6. Verify:
+
 ```bash
 gh aw --version
-python3 --version  # 确认 3.10+
+python3 --version
 ```
 
----
+## Lab 1: Understand the Project (10 minutes)
 
-## Lab 1: 理解项目结构（10 分钟）
+Open the project in VS Code and inspect:
 
-用 VS Code 打开项目，浏览以下文件：
+1. `.github/workflows/tech-insight.md`
 
-1. 打开工作流文件：`.github/workflows/tech-insight.md`
-   - YAML frontmatter 结构说明：
-     - `name:` 工作流名称
-     - `on: workflow_dispatch:` 手动触发
-     - `permissions: contents: read` 允许读取仓库内容（写入通过 safe-outputs 机制）
-     - `tools:` 声明 `bash` 和 `edit` 两个内置工具
-     - `mcp-scripts:` 定义 7 个 MCP Script Python 工具（抓取、聚类、洞察、报告等）
-     - `engine.id: copilot` 使用 Copilot CLI 执行 agent 工具调用
-     - `COPILOT_PROVIDER_BASE_URL` 指向 DeepSeek 的 OpenAI 兼容 API
-     - `COPILOT_PROVIDER_API_KEY` 从仓库 Secret `DEEPSEEK_API_KEY` 安全注入
-     - `engine.model: deepseek-v4-flash` 指定 DeepSeek 模型
-     - `network: allowed:` 显式域名白名单（列出所有允许访问的 RSS 源域名）
-   - Markdown 正文是给 AI 的自然语言指令，分为 4 个阶段。
+   This is the gh-aw source workflow. It defines the manual trigger, permissions, tool access, DeepSeek model settings, network allowlist, MCP script tools, and the English instructions for the four-phase coding AI report pipeline.
 
-2. 浏览 MCP Scripts 目录：`Lab-01-Tech-Insights/mcp-scripts/`
-   - 核心工具功能如下：
+2. `Lab-01-Tech-Insights/mcp-scripts/`
 
-| 脚本 | 功能 |
-|------|------|
-| tech_read_source_list.py | 读取 RSS 源列表配置 |
-| tech_fetch_all_to_disk.py | 并行抓取所有源的内容 |
-| tech_load_articles_from_disk.py | 加载并过滤有效文章 |
-| tech_cluster_or_fallback.py | 对文章进行热点聚类 |
-| tech_insight_or_fallback.py | 生成每个热点的洞察分析 |
-| tech_render_report_or_fallback.py | 渲染 Markdown 报告 |
-| write_text_file.py | 文件写入工具 |
+| Script | Purpose |
+|--------|---------|
+| `tech_read_source_list.py` | Reads source configuration |
+| `tech_fetch_all_to_disk.py` | Fetches all configured source payloads |
+| `tech_load_articles_from_disk.py` | Parses and filters articles |
+| `tech_cluster_or_fallback.py` | Validates or falls back for hotspot clustering |
+| `tech_insight_or_fallback.py` | Validates or falls back for hotspot insights |
+| `tech_render_report_or_fallback.py` | Validates or falls back for Markdown report rendering |
+| `write_text_file.py` | Writes text output files |
 
-3. 查看数据源：`Lab-01-Tech-Insights/input/api/rss_list.json`
-   - 包含 10 个精选 EV 行业 RSS 源（以中国新能源车市为主，兼顾全球 EV 媒体）。
-   - 每个源有 `signal_level`（S/A/B）字段，权重分别为 30/20/10，影响热点排序。
+3. `Lab-01-Tech-Insights/input/api/rss_list.json`
 
-4. 查看前端：`Lab-01-Tech-Insights/frontend/`
-   - `index.html` + `main.js` 实现浏览器端 Markdown 渲染为 HTML。
+   Contains curated coding AI sources, including official product feeds, changelogs, AI coding pages, and developer news feeds. Each source has a `signal_level` and optional `include_keywords` filter.
 
-> 💡 **核心概念**：gh-aw 将「Markdown + YAML frontmatter」编译成标准 GitHub Actions 工作流。AI agent 在 Actions runner 中执行，调用你定义的工具（MCP Scripts），完成复杂任务。
+4. `Lab-01-Tech-Insights/frontend/`
 
----
+   `index.html` and `main.js` render the Markdown report in the browser.
 
-## Lab 2: 配置认证与首次运行（20 分钟）
+Key idea: gh-aw compiles a Markdown workflow with YAML frontmatter into a GitHub Actions workflow. The AI agent runs in Actions, calls the configured tools, and produces reviewable report outputs.
 
-这是最重要的一步，成功运行你的第一个 Agentic Workflow！
+## Lab 2: Configure Auth and Run (20 minutes)
 
-### 步骤 1: 在 GitHub 上启用 Actions
-- 打开你 Fork 的仓库页面。
-- 点击 **Settings** → 左侧 **Actions** → **General**。
-- 确认 Actions permissions 已开启（Allow all actions）。
+### Step 1: Enable Actions
 
-### 步骤 2: 设置 DeepSeek API Key（关键步骤）
-- 前往 https://platform.deepseek.com/api_keys 创建 API Key，并确认账号有可用余额。
-- 回到你的 Fork 仓库 → **Settings** → **Secrets and variables** → **Actions**。
-- 点击 **New repository secret**。
-  - Name: `DEEPSEEK_API_KEY`
-  - Value: 粘贴刚才创建的 DeepSeek API Key。
-  - 点击 **Add secret**。
+Open your fork on GitHub, go to **Settings -> Actions -> General**, and confirm Actions are enabled.
 
-也可以使用 GitHub CLI 设置：
+### Step 2: Set DeepSeek API Key
+
+Create an API key at `https://platform.deepseek.com/api_keys`, then add it to your fork:
+
+- Repository **Settings -> Secrets and variables -> Actions**
+- **New repository secret**
+- Name: `DEEPSEEK_API_KEY`
+- Value: your API key
+
+CLI option:
+
 ```bash
 gh secret set DEEPSEEK_API_KEY
 ```
 
-> ⚠️ **注意**：不要把 API Key 写入 `.env.example`、工作流文件或任何会提交到 Git 的文件。
+Never commit real API keys.
 
-### 步骤 3: 编译 gh-aw 工作流
+### Step 3: Compile the gh-aw Workflow
+
 ```bash
-cd info-insights
 gh aw compile .github/workflows/tech-insight.md
 ```
-- 这会在同目录生成 `tech-insight.lock.yml`，即编译后的 GitHub Actions YAML 文件。
 
-### 步骤 4: 推送编译结果
+This generates `.github/workflows/tech-insight.lock.yml`.
+
+### Step 4: Push the Compiled Result
+
 ```bash
 git add .github/workflows/
-git commit -m "chore: compile gh-aw workflow"
+git commit -m "chore: compile coding ai insight workflow"
 git push origin main
 ```
 
-### 步骤 5: 手动触发工作流
-- **方法 A（推荐）**：在 GitHub UI 页面。
-  - 打开仓库 → **Actions** 标签页。
-  - 左侧选择 **EV Insight Workflow**。
-  - 点击 **Run workflow** → **Run workflow**。
-- **方法 B（CLI）**：
+### Step 5: Trigger the Workflow
+
+Recommended UI path:
+
+1. Open the repository **Actions** tab.
+2. Select **Coding AI Insight Workflow**.
+3. Click **Run workflow**.
+
+CLI option:
+
 ```bash
-gh workflow run "EV Insight Workflow"
+gh workflow run "Coding AI Insight Workflow"
 ```
 
-### 步骤 6: 观察运行
-- 在 Actions 页面点击正在运行的 workflow run。
-- 展开 `agent` job 查看实时日志（这是 AI 执行主要工作的步骤）。
-- 工作流一般需要 **15-20 分钟**完成（其中 agent 步骤约 10-15 分钟）。
+### Step 6: Inspect the Run
 
-### 步骤 7: 合并 PR 并检查输出
-- 运行成功后，工作流会通过 safe-outputs 机制**自动创建一个 PR**（标题以 `[ev-insight]` 开头）。
-- 在仓库 **Pull requests** 标签页找到该 PR，Review 后点击 **Merge**。
-- 合并后拉取最新代码：
+Open the running workflow and expand the agent job logs. The workflow usually takes 15-20 minutes, depending on source latency and model response time.
+
+### Step 7: Merge the Report PR
+
+After success, safe-outputs opens a PR with the latest report. Review and merge it, then pull the latest code:
+
 ```bash
 git pull origin main
 ```
-- 查看生成的文件：
-  - `Lab-01-Tech-Insights/output/raw_signals.json`
-  - `Lab-01-Tech-Insights/output/clusters/hotspots.json`
-  - `Lab-01-Tech-Insights/output/insights/insights.json`
-  - `Lab-01-Tech-Insights/output/report.md`
 
----
+Key output files:
 
-## Lab 3: 查看报告与本地预览（10 分钟）
+- `Lab-01-Tech-Insights/output/raw_signals.json`
+- `Lab-01-Tech-Insights/output/clusters/hotspots.json`
+- `Lab-01-Tech-Insights/output/insights/insights.json`
+- `Lab-01-Tech-Insights/output/report.md`
+- `Lab-01-Tech-Insights/frontend/report.md`
 
-1. 在 VS Code 中打开报告：
+## Lab 3: View the Report Locally (10 minutes)
+
+Open:
+
 ```bash
 code Lab-01-Tech-Insights/output/report.md
 ```
-- 观察报告结构：市场摘要 → 跨源趋势 → 重要单条更新 → 车企竞争雷达 → 新车型与产品发布 → 政策与销量 → 技术与电池研究。
 
-2. 本地预览前端：
+Expected report structure:
+
+- Market Summary
+- Cross-Source Trends
+- Important Single-Source Updates
+- Company Competition Radar
+- New Products and Capability Releases
+- Adoption and Policy
+- Technical Research
+
+Preview the frontend:
+
 ```bash
 python3 -m http.server 8000 --directory Lab-01-Tech-Insights/frontend
 ```
-- 在浏览器打开 `http://localhost:8000`。
-- 查看 Markdown 渲染成 HTML 的效果。
 
-3. 理解渲染流程：
-- `main.js` 使用 `fetch()` 加载 `report.md`。
-- 用 `marked.js` 将 Markdown 转换为 HTML。
+Visit `http://localhost:8000`.
 
-> 💡 **思考题**：如果你想更改报告的显示样式，应该修改哪个文件？（答案：`styles.css`）
+## Lab 4: Scheduled Trigger and GitHub Pages (10 minutes)
 
----
+### Experiment A: Add a Schedule
 
-## Lab 4: 实验 — 定时触发与 GitHub Pages（10 分钟）
+Edit `.github/workflows/tech-insight.md` and change `on:` to:
 
-### 实验 A: 添加定时触发
-
-1. 编辑 `.github/workflows/tech-insight.md` 的 frontmatter 部分。
-2. 将 `on:` 修改为：
 ```yaml
 on:
   workflow_dispatch:
   schedule: daily around 9am utc+8
 ```
 
-3. 重新编译并推送。
+Then recompile and push.
 
-### 实验 B: 开启 GitHub Pages
+### Experiment B: Enable GitHub Pages
 
-1. 打开仓库 → **Settings** → 左侧 **Pages**。
-2. Source 选择 **GitHub Actions**。
-3. GitHub Pages 会在以下情况自动部署：
-   - 当 `Lab-01-Tech-Insights/frontend/` 目录有文件变更被推送到 `main` 分支时（例如合并 EV Insight PR 后）。
-   - 也可以手动触发：
+1. Open **Settings -> Pages**.
+2. Set **Source** to **GitHub Actions**.
+3. GitHub Pages deploys when `Lab-01-Tech-Insights/frontend/` changes on `main`, such as after merging a Coding AI Insight report PR.
+
+Manual deploy:
+
 ```bash
 gh workflow run "Deploy GitHub Pages"
 ```
-4. 访问 `https://<你的用户名>.github.io/info-insights/` 查看在线版报告。
 
-> 💡 完整发布链路：EV Insight 工作流完成 → safe-outputs 创建 PR → 合并 PR → `frontend/report.md` 变更触发 deploy-pages → GitHub Pages 自动更新。
+Visit `https://<your-username>.github.io/info-insights/`.
 
----
+## Summary
 
-## 总结与下一步
+You learned how to:
 
-你在本实验中学到了：
-- ✅ gh-aw 的核心概念：Markdown 工作流 + MCP Scripts + AI Engine。
-- ✅ 如何安装、编译和运行 Agentic Workflows。
-- ✅ 如何设置定时触发和 GitHub Pages 部署。
+- Use gh-aw as a Markdown workflow plus MCP Scripts plus AI engine.
+- Configure, compile, and run a coding AI insights workflow.
+- Publish the generated report through GitHub Pages.
 
-延伸探索：
-- 尝试把 `engine.model` 切换为 `deepseek-v4-pro`，比较报告质量与成本。
-- 尝试改进 report 的前端样式，或者添加新的数据源。
-- 尝试抓取其他主题相关的 RSS 源，例如 AI、自动驾驶、智能座舱等。
-- 添加 safe-outputs 自动创建 Issue。
-- 探索更多 gh-aw 设计模式：https://github.github.com/gh-aw/
+Further experiments:
 
----
+- Switch `engine.model` to `deepseek-v4-pro` and compare report quality and cost.
+- Add or tune coding AI sources in `rss_list.json`.
+- Improve report styling in `frontend/styles.css`.
+- Add safe-outputs automation for Issues or Discussions.
+- Explore more gh-aw patterns at https://github.github.com/gh-aw/.
 
-## 附录 A: 目录结构参考
+## Appendix A: Directory Reference
+
 ```text
 info-insights/
 ├── .github/workflows/
-│   ├── tech-insight.md           # gh-aw 工作流定义
-│   ├── tech-insight.lock.yml     # 编译后的 Actions YAML
-│   └── deploy-pages.yml          # Pages 部署工作流
+│   ├── tech-insight.md           # gh-aw workflow definition
+│   ├── tech-insight.lock.yml     # compiled Actions YAML
+│   └── deploy-pages.yml          # Pages deployment workflow
 ├── Lab-01-Tech-Insights/
-│   ├── mcp-scripts/              # MCP Script 工具
-│   ├── input/api/rss_list.json   # 数据源（10 个 EV 精选 RSS）
-│   ├── frontend/                 # 展示前端
-│   └── output/                   # 运行时输出
+│   ├── mcp-scripts/              # MCP Script tools
+│   ├── input/api/rss_list.json   # coding AI source list
+│   ├── frontend/                 # static report frontend
+│   └── output/                   # runtime outputs
 ```
 
-## 附录 B: 常见问题
+## Appendix B: Troubleshooting
 
-1. **`gh aw compile` 报错**：检查 YAML frontmatter 格式，确保三横线 `---` 完整。
-2. **工作流运行失败**：检查 `DEEPSEEK_API_KEY` 是否已正确设置、账号余额是否充足，并确认 `api.deepseek.com` 在 `network.allowed` 中。
-3. **网络抓取超时**：可以在工作流配置中增加 `timeout_seconds`。
-4. **GitHub Pages 404**：确认 Settings → Pages 中的 Source 设置为 GitHub Actions。
-5. **查看思考过程**：在 Actions 日志中展开对应的 agent 步骤即可查看。
+1. `gh aw compile` fails: check YAML frontmatter and make sure the `---` delimiters are intact.
+2. Workflow run fails: check `DEEPSEEK_API_KEY`, account balance, and `network.allowed`.
+3. Source fetch times out: increase `timeout_seconds`.
+4. GitHub Pages returns 404: confirm Pages source is set to GitHub Actions.
+5. Need to inspect the agent work: expand the agent step in the Actions logs.
 
-## 附录 C: 参考链接
-- gh-aw 官方文档: https://github.github.com/gh-aw/
-- GitHub CLI 安装: https://cli.github.com
+## Appendix C: References
+
+- gh-aw docs: https://github.github.com/gh-aw/
+- GitHub CLI: https://cli.github.com

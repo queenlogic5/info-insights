@@ -1,83 +1,83 @@
-# EV Tech Insights
+# Coding AI Tech Insights
 
-基于 GitHub Agentic Workflows 与 DeepSeek API 的电动车行业洞察流水线。
+A GitHub Agentic Workflows and DeepSeek API pipeline for tracking coding AI, developer tools, coding agents, AI-native IDEs, model updates for software engineering, and enterprise governance.
 
-项目从多个 EV 行业 RSS 信号源抓取内容，完成热点聚类、市场洞察和 Markdown 报告生成，并可通过 GitHub Pages 展示最新报告。
+The project fetches coding-AI-focused RSS and web sources, clusters hot topics, generates market insights, renders a Markdown report, and publishes the latest report through GitHub Pages.
 
-## 工作流程
+## Workflow
 
 ```text
-RSS 信号源
-  → 抓取与清洗
-  → DeepSeek 热点聚类
-  → DeepSeek 洞察生成
-  → Markdown 报告
-  → Pull Request
-  → GitHub Pages
+Coding AI sources
+  -> fetch and clean
+  -> DeepSeek hotspot clustering
+  -> DeepSeek insight generation
+  -> Markdown report
+  -> Pull Request
+  -> GitHub Pages
 ```
 
-AI 模型使用 `deepseek-v4-flash`。工作流通过 gh-aw 的 BYOK （Bring Your Own Key 自带密钥）配置调用 DeepSeek OpenAI 兼容接口，不要求 GitHub Copilot 订阅。
+The workflow uses `deepseek-v4-flash` through gh-aw BYOK configuration against DeepSeek's OpenAI-compatible API. A GitHub Copilot subscription is not required for the model call.
 
-## 项目结构
+## Project Structure
 
 ```text
 .
 ├── .github/workflows/
-│   ├── tech-insight.md          # gh-aw 工作流源文件
-│   ├── tech-insight.lock.yml    # 编译后的 GitHub Actions 工作流
-│   └── deploy-pages.yml         # GitHub Pages 部署
+│   ├── tech-insight.md          # gh-aw workflow source
+│   ├── tech-insight.lock.yml    # compiled GitHub Actions workflow
+│   └── deploy-pages.yml         # GitHub Pages deployment
 └── Lab-01-Tech-Insights/
-    ├── input/api/               # RSS 数据源配置
-    ├── mcp-scripts/             # 抓取、聚类、洞察与报告工具
-    ├── output/                  # 流水线输出
-    ├── frontend/                # 报告展示页面
-    ├── run_local_pipeline.py    # 本地 fallback 诊断脚本
-    └── README.md                # 完整实验教程
+    ├── input/api/               # coding AI source configuration
+    ├── mcp-scripts/             # fetch, cluster, insight, and report tools
+    ├── output/                  # pipeline outputs
+    ├── frontend/                # static report viewer
+    ├── run_local_pipeline.py    # deterministic local diagnostic runner
+    └── README.md                # lab tutorial
 ```
 
-## 环境要求
+## Requirements
 
-- GitHub 账号
-- DeepSeek API Key，且账号具有可用余额
+- GitHub account
+- DeepSeek API key with available balance
 - GitHub CLI `gh`
-- gh-aw 扩展
+- gh-aw extension
 - Python 3.10+
 
-安装并检查 gh-aw：
+Install and check gh-aw:
 
 ```bash
 gh extension install github/gh-aw
 gh aw --version
 ```
 
-## 配置 DeepSeek API Key
+## Configure DeepSeek API Key
 
-在 GitHub 仓库的 **Settings → Secrets and variables → Actions** 中添加 Repository Secret：
+In your GitHub repository, add a repository secret under **Settings -> Secrets and variables -> Actions**:
 
 ```text
 Name:  DEEPSEEK_API_KEY
-Value: 你的 DeepSeek API Key
+Value: your DeepSeek API key
 ```
 
-也可以通过 GitHub CLI 设置：
+You can also set it with GitHub CLI:
 
 ```bash
 gh secret set DEEPSEEK_API_KEY
 ```
 
-不要将真实 API Key 写入代码、`.env.example` 或任何 Git 提交。
+Do not commit real API keys to code, `.env.example`, docs, or workflow files.
 
-## 允许 Actions 自动创建 Pull Request
+## Allow Actions to Create Pull Requests
 
-EV Insight 工作流通过 safe-outputs 自动创建报告 PR。首次运行前，需要在仓库中开启对应权限：
+The Coding AI Insight workflow uses safe-outputs to create report PRs. Before the first run, enable the matching repository permission:
 
-1. 打开仓库的 **Settings**。
-2. 选择 **Actions → General**。
-3. 滚动到 **Workflow permissions**。
-4. 勾选 **Allow GitHub Actions to create and approve pull requests**。
-5. 点击 **Save**。
+1. Open repository **Settings**.
+2. Choose **Actions -> General**.
+3. Scroll to **Workflow permissions**.
+4. Enable **Allow GitHub Actions to create and approve pull requests**.
+5. Save the setting.
 
-也可以通过 GitHub CLI 设置：
+With GitHub CLI:
 
 ```bash
 gh api \
@@ -87,26 +87,20 @@ gh api \
   -F can_approve_pull_request_reviews=true
 ```
 
-将 `OWNER/REPO` 替换为实际仓库，例如 `MetaHuman/info-insights`。验证设置：
+Replace `OWNER/REPO` with your repository, for example `MetaHuman/info-insights`.
 
-```bash
-gh api repos/OWNER/REPO/actions/permissions/workflow
-```
+## Compile and Run the Workflow
 
-返回结果中的 `can_approve_pull_request_reviews` 应为 `true`。如果网页选项不可用，说明该设置受组织或企业级 Actions 策略限制，需要由上级管理员开启。
-
-## 编译和运行工作流
-
-在仓库根目录执行：
+From the repository root:
 
 ```bash
 gh aw compile .github/workflows/tech-insight.md
-gh workflow run "EV Insight Workflow"
+gh workflow run "Coding AI Insight Workflow"
 ```
 
-也可以进入 GitHub 仓库的 **Actions** 页面，选择 **EV Insight Workflow** 后手动运行。
+You can also run it from the GitHub repository **Actions** page by choosing **Coding AI Insight Workflow**.
 
-工作流完成后会创建包含最新报告的 Pull Request。主要输出包括：
+When the workflow completes, it creates a pull request containing the latest report. Main outputs:
 
 - `Lab-01-Tech-Insights/output/raw_signals.json`
 - `Lab-01-Tech-Insights/output/clusters/hotspots.json`
@@ -114,22 +108,22 @@ gh workflow run "EV Insight Workflow"
 - `Lab-01-Tech-Insights/output/report.md`
 - `Lab-01-Tech-Insights/frontend/report.md`
 
-## 本地诊断
+## Local Diagnostic Run
 
-本地脚本不调用 DeepSeek，而是使用确定性 fallback 验证 Python 工具链：
+The local script uses deterministic fallback behavior and does not call DeepSeek:
 
 ```bash
 python Lab-01-Tech-Insights/run_local_pipeline.py
 ```
 
-预览前端报告：
+Preview the static frontend:
 
 ```bash
 python -m http.server 8000 --directory Lab-01-Tech-Insights/frontend
 ```
 
-然后访问 `http://localhost:8000`。
+Then visit `http://localhost:8000`.
 
-## 更多说明
+## More
 
-完整实验步骤、工作流阶段与故障排查请参阅 [Lab-01-Tech-Insights/README.md](Lab-01-Tech-Insights/README.md)。
+See [Lab-01-Tech-Insights/README.md](Lab-01-Tech-Insights/README.md) for the complete lab tutorial.

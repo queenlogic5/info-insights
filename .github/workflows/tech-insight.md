@@ -1,5 +1,5 @@
 ---
-name: EV Insight Workflow
+name: Coding AI Insight Workflow
 on:
   workflow_dispatch:
 strict: false
@@ -22,20 +22,20 @@ network:
     - defaults
     - python
     - "api.deepseek.com"
-    - "cnevpost.com"
-    - "carnewschina.com"
-    - "pandaily.com"
-    - "electrek.co"
-    - "insideevs.com"
-    - "cleantechnica.com"
-    - "thedriven.io"
-    - "www.theverge.com"
+    - "openai.com"
+    - "github.blog"
+    - "raw.githubusercontent.com"
+    - "www.anthropic.com"
+    - "www.cursor.com"
+    - "huggingface.co"
+    - "www.infoq.com"
     - "techcrunch.com"
-    - "chargedevs.com"
+    - "www.theverge.com"
+    - "simonwillison.net"
 safe-outputs:
   create-pull-request:
-    title-prefix: "[ev-insight] "
-    labels: [automation, ev-insight]
+    title-prefix: "[coding-ai-insight] "
+    labels: [automation, coding-ai-insight]
 mcp-scripts:
   tech-read-source-list:
     description: "Read RSS source list configuration"
@@ -168,11 +168,11 @@ mcp-scripts:
       echo "{\"path\": \"$INPUT_PATH\", \"text\": $(echo $INPUT_TEXT | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))'), \"overwrite\": ${INPUT_OVERWRITE:-true}}" | python3 Lab-01-Tech-Insights/mcp-scripts/write_text_file.py
 ---
 
-# EV 市场洞察与竞争雷达工作流
+# Coding AI Market Insights Workflow
 
-目标：以仓库根目录相对路径运行 Lab-01 EV 市场洞察主流程，聚合电动车（EV）/新能源汽车行业的市场动态与车企竞争信号；只允许手动触发，不要添加 `schedule` 或任何其他触发器。
+Goal: run the Lab-01 coding AI insights pipeline from repository-relative paths. Aggregate market, product, and developer-workflow updates about coding AI assistants, coding agents, AI-native IDEs, code review automation, model updates for software engineering, MCP/tool-use ecosystems, and enterprise governance. The workflow is manual only; do not add `schedule` or any other trigger.
 
-默认配置如下：
+Default configuration:
 
 - `source_list_path`: `Lab-01-Tech-Insights/input/api/rss_list.json`
 - `signals_dir`: `Lab-01-Tech-Insights/output/signals`
@@ -183,101 +183,104 @@ mcp-scripts:
 - `timeout_seconds`: `15`
 - `max_chars`: `200000`
 
-执行约束：
+Execution constraints:
 
-- 全程只使用仓库根目录相对路径，不要写绝对路径。
-- 聚焦电动车与新能源汽车行业（车企动态、销量、新车型、政策、电池与供应链），不要混入无关的泛科技内容。
-- 所有面向模型的提示词必须使用中文。
-- 关键中间产物必须落盘：`raw_signals.json`、`clusters/hotspots.json`、`insights/insights.json`、`report.md`。
-- 最终除写入 `Lab-01-Tech-Insights/output/report.md` 外，还要把同一份 Markdown 写入 `Lab-01-Tech-Insights/frontend/report.md`，并通过 safe-outputs 的提交机制提交 `Lab-01-Tech-Insights/frontend/report.md`。
+- Use repository-relative paths throughout; do not write absolute paths.
+- Focus only on coding AI and developer-tooling updates: coding assistants, repository agents, AI IDEs, code review, software engineering workflows, model releases relevant to code, MCP/tool use, security, governance, and enterprise adoption.
+- All model-facing prompts and generated reports must be in English.
+- Key intermediate artifacts must be written to disk: `raw_signals.json`, `clusters/hotspots.json`, `insights/insights.json`, and `report.md`.
+- In addition to writing `Lab-01-Tech-Insights/output/report.md`, write the same Markdown to `Lab-01-Tech-Insights/frontend/report.md` for the static frontend.
 
-## 阶段 1：抓取并装载原始信号
+## Phase 1: Fetch and Load Raw Signals
 
-1. 先调用 `tech.read_source_list(source_list_path)` 读取并确认源列表可用。
-2. 调用 `tech.fetch_all_to_disk(source_list_path, signals_dir, timeout_seconds=15, max_chars=200000, max_items_per_source=25)` 抓取所有信号并落盘到 `signals_dir`。
-3. 调用 `tech.load_articles_from_disk(signals_dir, source_list_path, max_items_per_source=25, time_window_hours=24)` 生成原始信号 JSON。
-4. 用 `edit` 工具将原始信号 JSON 写入 `Lab-01-Tech-Insights/output/raw_signals.json`。
-5. 简要汇报源列表路径、抓取目录、纳入时间窗与原始信号保存位置。
-6. 如果工具提示使用了兜底逻辑，在输出中注明。
+1. Call `tech.read_source_list(source_list_path)` and confirm the source list is usable.
+2. Call `tech.fetch_all_to_disk(source_list_path, signals_dir, timeout_seconds=15, max_chars=200000, max_items_per_source=25)` to fetch all sources into `signals_dir`.
+3. Call `tech.load_articles_from_disk(signals_dir, source_list_path, max_items_per_source=25, time_window_hours=24)` to produce raw signals JSON.
+4. Use the `edit` tool to write the raw signals JSON to `Lab-01-Tech-Insights/output/raw_signals.json`.
+5. Briefly report the source list path, fetch directory, time window, and raw signal output path.
+6. If any tool reports fallback behavior, mention it.
 
-## 阶段 2：聚类趋势与重点更新
+## Phase 2: Cluster Trends and High-Signal Updates
 
-1. 基于阶段 1 的原始信号，按下面这段中文提示原文构造聚类请求；必须保留原文语义与结构，仅把占位符替换成实际值与实际 JSON：
+1. Based on Phase 1 raw signals, construct the clustering request from this English prompt, replacing placeholders with actual values and JSON:
 
 ```text
-你是 EV 市场热点聚类 Agent。
-任务：把过去 {Local.TimeWindowHours} 小时内的电动车行业文章信号聚合成可行动的主题/更新列表。
+You are a coding AI market clustering agent.
+Task: aggregate article signals from the past {Local.TimeWindowHours} hours into actionable coding AI themes and updates.
 
-## 输入（严格 JSON）
+## Input (strict JSON)
 {MessageText(Local.RawSignals)}
 
-## 聚类原则（混合）
-- 先利用结构化元数据分桶：signal_level / source_type / platform / tracks 派生标签
-- 再在桶内按主题合并（标题 + 摘要 + 链接域名），并尽量从文章中识别涉及的车企品牌（如 BYD、Tesla、NIO、XPeng、Li Auto、小米、Volkswagen 等），写入 coverage.companies
-- 需要同时保留两类输出：
-  1) cross_source_trends：多来源共振的趋势主题（coverage 高）
-  2) high_signal_singles：单来源但信号强（S/A 或官方发布/财报/新车型）的重要更新
+## Clustering principles
+- First use structured metadata buckets: signal_level, source_type, platform, tracks, and source company.
+- Then merge related items by topic using title, summary, URL domain, vendor/product names, and technical theme.
+- Identify relevant vendors/products when possible, such as OpenAI Codex, GitHub Copilot, Claude Code, Cursor, Hugging Face, Sourcegraph Cody, Windsurf, JetBrains AI, VS Code, MCP, or model families. Store them in coverage.companies for compatibility with the downstream schema.
+- Keep two output categories:
+  1) cross_source_trends: multi-source themes with strong coverage
+  2) high_signal_singles: single-source but important updates from official sources, changelogs, product releases, model releases, security/governance updates, or engineering case studies
 
-## 强约束
-- 必须输出严格 JSON（不要代码块，不要解释）
-- 每个热点给出 samples（至少 3 条样本，single 允许 1-2 条）
-- 总数最多 {Local.TopK}
+## Hard constraints
+- Output strict JSON only; no code fences or explanation.
+- Each hotspot must include samples; trends should include at least 3 samples when available, singles may include 1-2.
+- Return at most {Local.TopK} hotspots.
 
-## 输出格式（严格 JSON）
+## Output format (strict JSON)
 {"hotspots": [{"hotspot_id": "H01", "title": "...", "summary": "...", "category": "trend|single", "overall_heat_score": 0, "coverage": {"source_count": 0, "companies": [], "platforms": []}, "should_chase": "yes|no", "chase_rationale": [], "samples": [{"platform": "...", "title": "...", "url": "...", "published_at": "...", "company": "...", "signal_level": "..."}]}]}
 ```
 
-2. 将模型生成的聚类候选结果交给 `tech.cluster_or_fallback(raw_signals_json, clusters_json, top_k=12)` 做校验与兜底，得到最终热点聚类 JSON。
-3. 用 `edit` 工具将最终热点聚类 JSON 写入 `Lab-01-Tech-Insights/output/clusters/hotspots.json`。
-4. 在输出中区分 `cross_source_trends` 与 `high_signal_singles` 的主要发现。
-5. 如果工具提示使用了兜底逻辑，在输出中注明。
+2. Pass the model-generated cluster candidate to `tech.cluster_or_fallback(raw_signals_json, clusters_json, top_k=12)` for validation and fallback.
+3. Use the `edit` tool to write the final cluster JSON to `Lab-01-Tech-Insights/output/clusters/hotspots.json`.
+4. Summarize the main `cross_source_trends` and `high_signal_singles`.
+5. If fallback was used, mention it.
 
-## 阶段 3：生成热点洞察
+## Phase 3: Generate Hotspot Insights
 
-1. 基于阶段 2 的热点聚类结果，按下面这段中文提示原文构造洞察请求；必须保留原文语义与结构，仅把占位符替换成实际 JSON：
+1. Based on Phase 2 clusters, construct the insight request from this English prompt, replacing placeholders with actual JSON:
 
 ```text
-你是 EV 市场洞察 Agent。任务：针对每个热点输出“发生了什么/为什么重要/影响谁/接下来怎么做”，站在车企竞争与市场策略视角分析。
+You are a coding AI market insights agent.
+Task: for each hotspot, explain what changed, why it matters, who is impacted, what to do next, and what risks to watch. Analyze from the perspective of software engineering teams, developer experience leaders, platform/security teams, and tool buyers.
 
-## 输入：热点聚类结果（严格 JSON）
+## Input: hotspot clusters (strict JSON)
 {MessageText(Local.HotspotClusters)}
 
-## 输出（严格 JSON）
+## Output (strict JSON)
 {"insights": [{"hotspot_id": "H01", "title": "...", "what_changed": "...", "why_it_matters": "...", "who_is_impacted": [], "next_actions": [], "risk_notes": [], "references": []}]}
 ```
 
-2. 将模型生成的洞察候选结果交给 `tech.insight_or_fallback(clusters_json, insights_json)` 做校验与兜底，得到最终洞察 JSON。
-3. 用 `edit` 工具将最终洞察 JSON 写入 `Lab-01-Tech-Insights/output/insights/insights.json`。
-4. 输出时覆盖“发生了什么 / 为什么重要 / 影响谁 / 接下来怎么做”四个维度。
-5. 如果工具提示使用了兜底逻辑，在输出中注明。
+2. Pass the model-generated insight candidate to `tech.insight_or_fallback(clusters_json, insights_json)` for validation and fallback.
+3. Use the `edit` tool to write the final insight JSON to `Lab-01-Tech-Insights/output/insights/insights.json`.
+4. Cover the four dimensions: what changed, why it matters, who is impacted, and what to do next.
+5. If fallback was used, mention it.
 
-## 阶段 4：生成并提交 Markdown 报告
+## Phase 4: Generate and Submit Markdown Report
 
-1. 基于阶段 2 的聚类结果与阶段 3 的洞察结果，按下面这段中文提示原文构造报告请求；必须保留原文语义与结构，仅把占位符替换成实际 JSON：
+1. Based on Phase 2 clusters and Phase 3 insights, construct the report request from this English prompt, replacing placeholders with actual JSON:
 
 ```text
-你是 EV 市场洞察报告撰写 Agent。
-请基于聚类与洞察生成一份 Markdown 报告（中英混合可接受，但以中文为主），结构包含：
-- 市场摘要（过去 24h 的关键动态总览）
-- 跨源趋势（多来源共振的行业趋势）
-- 重要单条更新（单一来源但信号强的重要更新）
-- 车企竞争雷达（按车企品牌归类的动态，如 BYD、Tesla、NIO、XPeng、Li Auto、小米等）
-- 新车型与产品发布（新车发布、改款、产品与定价）
-- 政策与销量（补贴/法规/关税、交付与销量数据）
-- 技术与电池研究（电池、充电、智能驾驶等技术进展）
+You are a coding AI market report writer.
+Generate a polished English Markdown report from the clusters and insights. Keep the same format as the sample frontend report and include:
 
-## 输入：聚类（JSON）
+- Market Summary: key updates from the past 24 hours
+- Cross-Source Trends: multi-source coding AI themes
+- Important Single-Source Updates: official or high-signal single-source updates
+- Company Competition Radar: vendor/product activity grouped by company or tool
+- New Products and Capability Releases: model, agent, IDE, review, MCP, or workflow capabilities
+- Adoption and Policy: enterprise adoption, governance, privacy, security, and procurement signals
+- Technical Research: model capability, evaluation, security, sandboxing, code quality, and engineering practice
+
+## Input: clusters (JSON)
 {MessageText(Local.HotspotClusters)}
 
-## 输入：洞察（JSON）
+## Input: insights (JSON)
 {MessageText(Local.HotspotInsights)}
 
-输出 Markdown，不要代码块。
+Output Markdown only. Do not use a code block.
 ```
 
-2. 将模型生成的 Markdown 草稿交给 `tech.render_report_or_fallback(clusters_json, insights_json, draft_markdown)` 做校验与兜底，得到最终 Markdown。
-3. 用 `edit` 工具将最终 Markdown 写入 `Lab-01-Tech-Insights/output/report.md`。
-4. 再用 `edit` 工具将同一份 Markdown 写入 `Lab-01-Tech-Insights/frontend/report.md`，作为前端展示文件。
-5. 通过 safe-outputs 的 `create-pull-request` 机制提交包含 `Lab-01-Tech-Insights/output/report.md` 和 `Lab-01-Tech-Insights/frontend/report.md` 的 PR。PR 标题应包含日期和报告摘要。不要引入额外的手工 git 流程。
-6. 最终总结需说明报告输出路径、前端同步路径和 PR 编号。
-7. 如果工具提示使用了兜底逻辑，在输出中注明。
+2. Pass the model-generated Markdown draft to `tech.render_report_or_fallback(clusters_json, insights_json, draft_markdown)` for validation and fallback.
+3. Use the `edit` tool to write the final Markdown to `Lab-01-Tech-Insights/output/report.md`.
+4. Use the `edit` tool to write the same Markdown to `Lab-01-Tech-Insights/frontend/report.md`.
+5. Use safe-outputs `create-pull-request` to submit a PR containing `Lab-01-Tech-Insights/output/report.md` and `Lab-01-Tech-Insights/frontend/report.md`. The PR title should include the date and a short report summary. Do not introduce a manual git workflow.
+6. Final summary must include the report output path, frontend sync path, and PR number.
+7. If fallback was used, mention it.

@@ -27,7 +27,7 @@ async function getMarked() {
   }
 
   throw new Error(
-    "Markdown 解析器 marked 未加载（请检查 index.html 是否成功加载 ./vendor/marked.min.js）。"
+    "Markdown parser marked was not loaded. Check that index.html loaded ./vendor/marked.min.js."
   );
 }
 
@@ -46,7 +46,7 @@ function parseMarkdown(markedLib, markdown) {
     return markedLib(markdown, options);
   }
 
-  throw new Error("marked 已加载但未暴露 parse()。");
+  throw new Error("marked was loaded but did not expose parse().");
 }
 
 async function renderMarkdown(markdown) {
@@ -55,7 +55,7 @@ async function renderMarkdown(markdown) {
 
   const purifier = globalThis.DOMPurify;
   if (!purifier || typeof purifier.sanitize !== "function") {
-    throw new Error("HTML 清洗器 DOMPurify 未加载。");
+    throw new Error("HTML sanitizer DOMPurify was not loaded.");
   }
 
   const clean = purifier.sanitize(html, {
@@ -67,15 +67,15 @@ async function renderMarkdown(markdown) {
 }
 
 async function loadReport(reportPath) {
-  setStatus(`正在加载：${reportPath}`);
+  setStatus(`Loading: ${reportPath}`);
 
   try {
     const markdown = await fetchText(reportPath);
     await renderMarkdown(markdown);
-    setStatus(`已加载：${reportPath}`);
+    setStatus(`Loaded: ${reportPath}`);
   } catch (err) {
     console.error(err);
-    setStatus(`加载失败：${reportPath}。${err?.message || err}`, "error");
+    setStatus(`Failed to load: ${reportPath}. ${err?.message || err}`, "error");
 
     const content = document.getElementById("content");
     content.innerHTML = "";

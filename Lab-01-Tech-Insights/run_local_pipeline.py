@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""本地诊断驱动：模拟 tech-insight 工作流中 AI agent 的 4 阶段编排。
+"""Local diagnostic driver for the four-phase tech-insight agent workflow.
 
-不依赖 GitHub Actions / Copilot LLM。阶段 2/3/4 的 LLM 草稿传空串，
-触发 *_or_fallback 的确定性兜底逻辑，用于验证整条 Python 工具链能否在本地跑通。
+This does not depend on GitHub Actions or a Copilot LLM. Phases 2, 3, and 4
+pass empty LLM drafts to trigger deterministic *_or_fallback logic and verify
+that the Python toolchain can run locally.
 
-从仓库根目录运行：
+Run from the repository root:
     python Lab-01-Tech-Insights/run_local_pipeline.py
 """
 
@@ -16,7 +17,7 @@ import time
 import traceback
 from pathlib import Path
 
-# 仓库根目录（脚本位于 Lab-01-Tech-Insights/ 下）
+# Repository root. This script lives under Lab-01-Tech-Insights/.
 REPO_ROOT = Path(__file__).resolve().parents[1]
 LAB_DIR = REPO_ROOT / "Lab-01-Tech-Insights"
 SCRIPTS_DIR = LAB_DIR / "mcp-scripts"
@@ -31,7 +32,7 @@ from tech_insight_tools import (  # noqa: E402
     tech_render_report_or_fallback,
 )
 
-# 工作流默认参数（与 .github/workflows/tech-insight.md 一致）
+# Workflow defaults, kept in sync with .github/workflows/tech-insight.md.
 SOURCE_LIST_PATH = "Lab-01-Tech-Insights/input/api/rss_list.json"
 SIGNALS_DIR = "Lab-01-Tech-Insights/output/signals"
 OUTPUT_DIR = "Lab-01-Tech-Insights/output"
@@ -63,11 +64,11 @@ def main() -> int:
 
     diag: dict[str, object] = {}
 
-    # ---------------- 阶段 1：抓取并装载原始信号 ----------------
-    _hr("阶段 1：抓取并装载原始信号")
+    # ---------------- Phase 1: fetch and load raw signals ----------------
+    _hr("Phase 1: fetch and load raw signals")
 
     src = tech_read_source_list(source_list_path=SOURCE_LIST_PATH)
-    print(f"[read_source_list] 源数量: {src.get('count')}")
+    print(f"[read_source_list] source count: {src.get('count')}")
     diag["source_count"] = src.get("count")
 
     t0 = time.time()
@@ -79,8 +80,8 @@ def main() -> int:
         max_items_per_source=MAX_ITEMS_PER_SOURCE,
     )
     print(
-        f"[fetch_all_to_disk] 抓取 {fetch.get('fetched')} 个源, "
-        f"成功 {fetch.get('ok')} 个, 耗时 {time.time() - t0:.1f}s"
+        f"[fetch_all_to_disk] fetched {fetch.get('fetched')} sources, "
+        f"{fetch.get('ok')} succeeded, elapsed {time.time() - t0:.1f}s"
     )
     diag["fetch_total"] = fetch.get("fetched")
     diag["fetch_ok"] = fetch.get("ok")
@@ -92,61 +93,61 @@ def main() -> int:
         time_window_hours=TIME_WINDOW_HOURS,
     )
     items = raw_signals.get("items") or []
-    print(f"[load_articles_from_disk] 时间窗 {TIME_WINDOW_HOURS}h 内文章: {len(items)} 条")
+    print(f"[load_articles_from_disk] items in {TIME_WINDOW_HOURS}h window: {len(items)}")
     diag["raw_items"] = len(items)
 
     raw_signals_json = json.dumps(raw_signals, ensure_ascii=False, default=str)
     p1 = _write("Lab-01-Tech-Insights/output/raw_signals.json", raw_signals_json + "\n")
-    print(f"[落盘] {p1}")
+    print(f"[written] {p1}")
 
-    # ---------------- 阶段 2：聚类（fallback 路径）----------------
-    _hr("阶段 2：聚类趋势与重点更新（本地无 LLM -> fallback）")
+    # ---------------- Phase 2: clustering via fallback path ----------------
+    _hr("Phase 2: cluster trends and updates (local no-LLM fallback)")
     clusters = tech_cluster_or_fallback(
         raw_signals_json=raw_signals_json,
-        clusters_json="",  # 本地无 LLM，触发 fallback
+        clusters_json="",  # Local no-LLM mode triggers fallback.
         top_k=TOP_K,
     )
     hotspots = clusters.get("hotspots") or []
-    print(f"[cluster_or_fallback] mode={clusters.get('mode')} 热点数: {len(hotspots)}")
+    print(f"[cluster_or_fallback] mode={clusters.get('mode')} hotspots: {len(hotspots)}")
     diag["cluster_mode"] = clusters.get("mode")
     diag["hotspots"] = len(hotspots)
 
     clusters_json = json.dumps(clusters, ensure_ascii=False, default=str)
     p2 = _write("Lab-01-Tech-Insights/output/clusters/hotspots.json", clusters_json + "\n")
-    print(f"[落盘] {p2}")
+    print(f"[written] {p2}")
 
-    # ---------------- 阶段 3：洞察（fallback 路径）----------------
-    _hr("阶段 3：生成热点洞察（本地无 LLM -> fallback）")
+    # ---------------- Phase 3: insights via fallback path ----------------
+    _hr("Phase 3: generate hotspot insights (local no-LLM fallback)")
     insights = tech_insight_or_fallback(
         clusters_json=clusters_json,
-        insights_json="",  # 本地无 LLM，触发 fallback
+        insights_json="",  # Local no-LLM mode triggers fallback.
     )
     insights_list = insights.get("insights") or []
-    print(f"[insight_or_fallback] mode={insights.get('mode')} 洞察数: {len(insights_list)}")
+    print(f"[insight_or_fallback] mode={insights.get('mode')} insights: {len(insights_list)}")
     diag["insight_mode"] = insights.get("mode")
     diag["insights"] = len(insights_list)
 
     insights_json = json.dumps(insights, ensure_ascii=False, default=str)
     p3 = _write("Lab-01-Tech-Insights/output/insights/insights.json", insights_json + "\n")
-    print(f"[落盘] {p3}")
+    print(f"[written] {p3}")
 
-    # ---------------- 阶段 4：报告（fallback 路径）----------------
-    _hr("阶段 4：生成并提交 Markdown 报告（本地无 LLM -> fallback）")
+    # ---------------- Phase 4: report via fallback path ----------------
+    _hr("Phase 4: generate Markdown report (local no-LLM fallback)")
     report_md = tech_render_report_or_fallback(
         clusters_json=clusters_json,
         insights_json=insights_json,
-        draft_markdown="",  # 本地无 LLM，触发 fallback
+        draft_markdown="",  # Local no-LLM mode triggers fallback.
     )
-    print(f"[render_report_or_fallback] 报告长度: {len(report_md)} chars")
+    print(f"[render_report_or_fallback] report length: {len(report_md)} chars")
     diag["report_chars"] = len(report_md)
 
     p4a = _write("Lab-01-Tech-Insights/output/report.md", report_md)
     p4b = _write("Lab-01-Tech-Insights/frontend/report.md", report_md)
-    print(f"[落盘] {p4a}")
-    print(f"[落盘] {p4b}")
+    print(f"[written] {p4a}")
+    print(f"[written] {p4b}")
 
-    # ---------------- 诊断汇总 ----------------
-    _hr("诊断汇总")
+    # ---------------- Diagnostic summary ----------------
+    _hr("Diagnostic summary")
     print(json.dumps(diag, ensure_ascii=False, indent=2))
 
     ok = (
@@ -154,7 +155,7 @@ def main() -> int:
         and (diag.get("hotspots") or 0) >= 0
         and (diag.get("report_chars") or 0) > 0
     )
-    print(f"\n[结果] 流水线执行: {'成功 ✅' if ok else '存在问题 ❌'}")
+    print(f"\n[result] pipeline execution: {'success' if ok else 'issues found'}")
     return 0 if ok else 1
 
 
@@ -164,6 +165,6 @@ if __name__ == "__main__":
     except SystemExit:
         raise
     except Exception:
-        print("\n[FATAL] 流水线执行异常：", flush=True)
+        print("\n[FATAL] pipeline execution failed:", flush=True)
         traceback.print_exc()
         raise SystemExit(2)
