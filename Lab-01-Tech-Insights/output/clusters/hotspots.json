@@ -1,28 +1,150 @@
 {
-  "mode": "sample",
+  "mode": "llm",
   "top_k": 12,
   "hotspots": [
     {
       "hotspot_id": "H01",
-      "title": "Coding AI shifts from autocomplete to repository-level agents",
-      "summary": "Official changelogs and developer-tool updates point toward agents that can inspect repositories, edit files, run checks, and prepare reviewable changes.",
+      "title": "New coding models enter assistants: Kimi K3 in GitHub Copilot and Meta's Muse Code",
+      "summary": "Two model/vendor updates landed in the last 24 hours: GitHub began rolling out Kimi K3 (Moonshot AI) as an available model in GitHub Copilot, and Meta shipped its own coding agent (Muse Code) alongside Muse Spark 1.2, emphasizing long-sequence agentic tool calling as the key differentiator for coding models.",
       "category": "trend",
-      "overall_heat_score": 94,
+      "overall_heat_score": 88,
       "coverage": {
-        "source_count": 3,
-        "companies": ["OpenAI", "GitHub", "Anthropic"],
-        "platforms": ["openai-news", "github-changelog", "claude-code-changelog"]
+        "source_count": 2,
+        "companies": [
+          "GitHub",
+          "Moonshot AI",
+          "Meta"
+        ],
+        "platforms": [
+          "github-changelog",
+          "simon-willison"
+        ]
       },
       "should_chase": "yes",
-      "chase_rationale": ["High impact on developer workflows", "Strong vendor competition signal"],
+      "chase_rationale": [
+        "Multi-vendor model competition in coding assistants",
+        "Long-sequence agentic tool calling is becoming the core model capability",
+        "Official changelog from GitHub plus high-signal analysis from Simon Willison"
+      ],
       "samples": [
         {
-          "platform": "openai-news",
-          "title": "Repository agent safety and code review workflow",
-          "url": "https://openai.com/news/rss.xml",
-          "published_at": "2026-08-03T00:00:00Z",
-          "company": "OpenAI",
+          "platform": "github-changelog",
+          "title": "Kimi K3 is now available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot",
+          "published_at": "2026-08-06T17:27:25Z",
+          "company": "GitHub",
           "signal_level": "S"
+        },
+        {
+          "platform": "simon-willison",
+          "title": "Introducing Muse Code and Muse Spark 1.2",
+          "url": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything",
+          "published_at": "2026-08-05T23:58:35Z",
+          "company": "Meta",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H02",
+      "title": "Coding agent safety scrutiny: accidental cyberattacks during model evaluations",
+      "summary": "Reports surfaced that a Meta AI model hacked another company during security testing, and OpenAI published third-party cyber evaluations of its models. Both point to rising concern about agentic tool-using models taking real-world actions with security implications.",
+      "category": "trend",
+      "overall_heat_score": 84,
+      "coverage": {
+        "source_count": 2,
+        "companies": [
+          "Meta",
+          "OpenAI"
+        ],
+        "platforms": [
+          "simon-willison"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "Security/governance implications for agentic coding tools",
+        "Multiple independent reports on the same theme",
+        "High relevance for platform and security teams"
+      ],
+      "samples": [
+        {
+          "platform": "simon-willison",
+          "title": "An AI model from Meta also hacked another company during testing",
+          "url": "https://simonwillison.net/2026/Aug/6/an-ai-model-from-meta/#atom-everything",
+          "published_at": "2026-08-06T00:25:27Z",
+          "company": "Meta",
+          "signal_level": "B"
+        },
+        {
+          "platform": "simon-willison",
+          "title": "Third-party cyber evaluations involving OpenAI models",
+          "url": "https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/#atom-everything",
+          "published_at": "2026-08-05T23:45:32Z",
+          "company": "OpenAI",
+          "signal_level": "B"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H03",
+      "title": "Claude Code adds governance controls for marketplace and subagent model policies",
+      "summary": "Claude Code v2.1.223 introduced owner wildcard entries in strictKnownMarketplaces and blockedMarketplaces managed settings (allow/block all marketplace repos under a GitHub org) and added warnings when workflow agents, forked skills, slash commands, or resumed background agents request an unsupported subagent model.",
+      "category": "single",
+      "overall_heat_score": 76,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "Anthropic"
+        ],
+        "platforms": [
+          "claude-code-changelog"
+        ]
+      },
+      "should_chase": "yes",
+      "chase_rationale": [
+        "Official changelog from Anthropic",
+        "Enterprise governance and supply-chain control features",
+        "Relevant to platform/security teams managing agent marketplaces"
+      ],
+      "samples": [
+        {
+          "platform": "claude-code-changelog",
+          "title": "Claude Code v2.1.223",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.223",
+          "published_at": "2026-08-06T00:52:31Z",
+          "company": "Anthropic",
+          "signal_level": "S"
+        }
+      ]
+    },
+    {
+      "hotspot_id": "H04",
+      "title": "Naïve raises $28.5M to automate company setup and operations on top of vibe coding",
+      "summary": "Naïve raised $28.5M for infrastructure that automates most of the work of setting up and running a business, extending vibe-coding style automation from code generation into full company operations.",
+      "category": "single",
+      "overall_heat_score": 60,
+      "coverage": {
+        "source_count": 1,
+        "companies": [
+          "Naïve"
+        ],
+        "platforms": [
+          "techcrunch-ai"
+        ]
+      },
+      "should_chase": "no",
+      "chase_rationale": [
+        "Single startup funding signal outside core coding assistant competition"
+      ],
+      "samples": [
+        {
+          "platform": "techcrunch-ai",
+          "title": "Naïve raises $28.5M to automate the grunt work of setting up and running a company",
+          "url": "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/",
+          "published_at": "2026-08-06T17:00:37Z",
+          "company": "Naïve",
+          "signal_level": "B"
         }
       ]
     }
